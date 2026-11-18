@@ -1,0 +1,11 @@
+<svg viewBox="0 0 180 90" xmlns="http://www.w3.org/2000/svg">
+  <g stroke="#1e1e1e" stroke-width="1.5" fill="none">
+    <circle cx="55" cy="45" r="35"/>
+    <circle cx="125" cy="45" r="35"/>
+    <!-- Schlinge loop at top intersection -->
+    <ellipse cx="90" cy="10" rx="6" ry="10"/>
+    <!-- Connecting lines from circles to loop -->
+    <line x1="84" y1="18" x2="80" y2="25"/>
+    <line x1="96" y1="18" x2="100" y2="25"/>
+  </g>
+</svg>

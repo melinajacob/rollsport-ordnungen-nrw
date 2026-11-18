@@ -1,0 +1,14 @@
+<svg viewBox="0 0 180 90" xmlns="http://www.w3.org/2000/svg">
+  <g stroke="#1e1e1e" stroke-width="1.5" fill="none">
+    <circle cx="55" cy="45" r="35"/>
+    <circle cx="125" cy="45" r="35"/>
+    <!-- Gegendreier cusps (inward) -->
+    <path d="M 83,20 Q 90,25 97,20"/>
+    <path d="M 83,70 Q 90,65 97,70"/>
+    <!-- Gegenwende bracket marks (inward facing) -->
+    <path d="M 82,33 L 86,38 L 82,43"/>
+    <path d="M 98,33 L 94,38 L 98,43"/>
+    <!-- Paragraph mark -->
+    <line x1="80" y1="45" x2="100" y2="45"/>
+  </g>
+</svg>

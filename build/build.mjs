@@ -27,6 +27,32 @@ writeFileSync(join(DIST, 'styles.css'), readFileSync(join(BUILD_DIR, 'styles.css
 writeFileSync(join(DIST, 'web.css'), readFileSync(join(BUILD_DIR, 'web.css')));
 writeFileSync(join(DIST, 'print.css'), readFileSync(join(BUILD_DIR, 'print.css')));
 
+// Copy content assets before PDF generation so images resolve
+if (existsSync(join(CONTENT_DIR, 'boegen'))) {
+  for (const { slug } of documents) {
+    const target = join(DIST, slug, 'boegen');
+    mkdirSync(target, { recursive: true });
+    cpSync(join(CONTENT_DIR, 'boegen'), target, { recursive: true });
+  }
+}
+if (existsSync(join(CONTENT_DIR, 'wko'))) {
+  for (const { slug } of documents) {
+    const target = join(DIST, slug, 'wko');
+    mkdirSync(target, { recursive: true });
+    cpSync(join(CONTENT_DIR, 'wko'), target, { recursive: true });
+  }
+}
+const logoSrc = join(CONTENT_DIR, 'rkb-logo.svg');
+if (existsSync(logoSrc)) {
+  mkdirSync(join(DIST, 'content'), { recursive: true });
+  cpSync(logoSrc, join(DIST, 'content', 'rkb-logo.svg'));
+  for (const { slug } of documents) {
+    const target = join(DIST, slug, 'content');
+    mkdirSync(target, { recursive: true });
+    cpSync(logoSrc, join(target, 'rkb-logo.svg'));
+  }
+}
+
 writeFileSync(join(DIST, 'index.html'), renderLandingPage(documents));
 console.log('✓ index.html');
 
@@ -68,21 +94,6 @@ for (const { slug, doc } of documents) {
     }
 
     try { const { unlinkSync } = await import('node:fs'); unlinkSync(tempHtml); } catch {}
-  }
-}
-
-if (existsSync(join(CONTENT_DIR, 'boegen'))) {
-  for (const { slug } of documents) {
-    const target = join(DIST, slug, 'boegen');
-    mkdirSync(target, { recursive: true });
-    cpSync(join(CONTENT_DIR, 'boegen'), target, { recursive: true });
-  }
-}
-if (existsSync(join(CONTENT_DIR, 'wko'))) {
-  for (const { slug } of documents) {
-    const target = join(DIST, slug, 'wko');
-    mkdirSync(target, { recursive: true });
-    cpSync(join(CONTENT_DIR, 'wko'), target, { recursive: true });
   }
 }
 

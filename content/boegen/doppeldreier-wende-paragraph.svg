@@ -1,0 +1,14 @@
+<svg viewBox="0 0 180 90" xmlns="http://www.w3.org/2000/svg">
+  <g stroke="#1e1e1e" stroke-width="1.5" fill="none">
+    <circle cx="55" cy="45" r="35"/>
+    <circle cx="125" cy="45" r="35"/>
+    <!-- Doppeldreier cusps (outward) -->
+    <path d="M 85,17 Q 90,10 95,17"/>
+    <path d="M 85,73 Q 90,80 95,73"/>
+    <!-- Wende bracket marks -->
+    <path d="M 82,30 L 78,35 L 82,40"/>
+    <path d="M 98,30 L 102,35 L 98,40"/>
+    <!-- Paragraph mark -->
+    <line x1="80" y1="45" x2="100" y2="45"/>
+  </g>
+</svg>

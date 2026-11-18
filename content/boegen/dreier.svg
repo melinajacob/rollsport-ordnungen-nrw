@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 80">
+  <g fill="none" stroke="#1e1e1e" stroke-width="1.5">
+    <circle cx="55" cy="40" r="35"/>
+    <circle cx="125" cy="40" r="35"/>
+    <!-- Dreier cusp at top intersection pointing outward -->
+    <path d="M 86,18 Q 90,6 94,18"/>
+  </g>
+</svg>
