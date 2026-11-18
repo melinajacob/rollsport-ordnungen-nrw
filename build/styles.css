@@ -188,9 +188,24 @@ thead tr:empty {
 }
 
 .block-abschnitt.kasten-rosa {
-  padding: 0.6em 1em;
+  padding: 0.8em 1.2em;
   background: var(--color-rosa);
   border-radius: var(--radius);
+  margin-bottom: 0.8em;
+}
+
+.block-abschnitt.kasten-rosa h3 {
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 0.3em;
+}
+
+.block-abschnitt.kasten-rosa .abschnitt-inhalt {
+  font-size: 0.95rem;
+}
+
+.block-abschnitt.kasten-rosa .abschnitt-inhalt p:last-child {
+  margin-bottom: 0;
 }
 
 .abschnitt-columns {
@@ -329,21 +344,23 @@ thead tr:empty {
 .block-boegen .boegen-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5em 2em;
+  gap: 2em 2em;
 }
 
 .bogen-fig {
-  text-align: center;
+  text-align: left;
 }
 
 .bogen-fig img {
-  max-width: 180px;
+  max-width: 220px;
   height: auto;
+  display: block;
 }
 
 .bogen-fig figcaption {
   font-weight: 900;
-  margin-top: 0.3em;
+  font-size: 1.1rem;
+  margin-bottom: 0.3em;
 }
 
 /* Pirouette */

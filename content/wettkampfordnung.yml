@@ -12,26 +12,78 @@ kapitel:
     bloecke:
       - typ: abschnitt
         titel: "Neuerungen von Saison 2025 zu 2026"
-        inhalt: |
-          - Trennung der Wettbewerbe Fortgeschrittene 1 (F1) – Pflicht und Kür werden getrennt gewertet
-          - Sonderwettbewerb Anfänger 0 (neue Kategorie A0, max. 5 Starter pro Verein)
-          - Anforderungen Einzellauf Kür Meisterklasse: Pirouetten erweitert (Biellmann, Bryant, Biellmann Hacke)
-          - Änderung der Wertigkeiten (Sprünge und Pirouetten)
-          - Änderung des Wertungssystems: A-Note wird gedrittelt (Sprünge 1/3, Pirouetten 1/3, Skating Skills 1/3)
+        kopfzeile: "Neuerungen von Saison 2025 zu 2026"
+        neue_seite: true
+        inhalt: ""
 
       - typ: abschnitt
-        titel: "Sonderregelungen NRW"
+        kasten: rosa
+        titel: "Trennung der Wettbewerbe Fortgeschrittene 1"
         inhalt: |
-          **Anzahl Starter pro Verein:**
-          - A0: max. 5 Läufer:innen
-          - A1: max. 8 Läufer:innen
-          - Zweier-/Paar-/Gruppenlauf: max. 6 pro Verein
+          Die Fortgeschrittene 1 Klasse wird ab der Saison 2026 in Pflicht und Kür als
+          getrennte Wettbewerbe auf den Landesmeisterschaften behandelt.
 
-          **Sonderqualifikation:** Einzellauf A1 bis Nachwuchsklasse
+      - typ: abschnitt
+        kasten: rosa
+        titel: "Sonderwettbewerb Anfänger 0"
+        inhalt: |
+          Im Einzellaufen wird eine neue Kategorie A0 als Sonderwettbewerb auf der
+          Landesmeisterschaft eingeführt. Jeder Verein darf 5 Läufer/innen melden. A0 ist von
+          den anderen Wettbewerben unabhängig. Läufer/innen in A0 können weiterhin am
+          Pokalwettbewerb teilnehmen. Aus A0 kann nicht aufgestiegen werden. Der Verein
+          kann in jedem Jahr neu entscheiden, ob ein/e Läufer/in in A0 oder A1 an den Start
+          geht.
 
-          **Gruppenläufe:** Geschlechtsunspezifisch erlaubt
+      - typ: abschnitt
+        kasten: rosa
+        titel: "Änderungen Anforderungen Einzellauf Kür Meisterklasse"
+        inhalt: |
+          Im Einzellauf der Meisterklasse wurde die Auswahl der zusätzlich erlaubten
+          Pirouetten der Kategorie A erweitert durch: Biellmann, Bryant und Biellmann Hacke
 
-          **Unsportliches Verhalten:** Abzug in der B-Note von -0,3 bis -1,0
+      - typ: abschnitt
+        kasten: rosa
+        titel: "Änderung der Wertigkeiten"
+        inhalt: |
+          Die Wertigkeiten der Kürelemente haben sich geändert. Zusätzlich sind vorgegebene
+          Wertigkeiten für Sprungkombinationen hinzugekommen.
+
+      - typ: abschnitt
+        kasten: rosa
+        titel: "Änderung des Wertungssystems!"
+        inhalt: |
+          Die A-Note wird ab der Saison 2026 nicht mehr nur durch Sprungelemente und
+          Pirouetten zusammengesetzt, sondern wird dreigeteilt und durch die Skatingskills
+          ergänzt.
+
+      - typ: abschnitt
+        titel: "Sonderregelungen NRW Meisterschaften"
+        kopfzeile: "Sonderregelungen NRW Meisterschaften"
+        neue_seite: true
+        inhalt: |
+          **Anzahl Starter pro Verein**
+
+          Einzellauf A0 - max. 5 Starter
+          Einzellauf A1 - max. 8 Starter
+          Zweier-/ Paar-/ und Gruppenlauf - max. 6 Starter pro Leistungsklasse
+
+          **Sonderqualifikation Einzellauf A1 bis NWK**
+
+          Jedem Verein ist erlaubt, maximal eine/n Läufer/in pro Saison ein
+          Überspringen der Startkategorie „Einzellauf Anfänger 1" oder einen Aufstieg in
+          eine höhere Klasse zu ermöglichen. Diese/r Läufer/in muss den anderen Vereinen
+          im Voraus namentlich mitgeteilt werden. Der jeweilige Verein entscheidet nach
+          Ermessen, ob der Start gerechtfertigt ist.
+
+          **Gruppenläufe**
+
+          Es ist erlaubt, Gruppenläufe geschlechtsunspezifisch zu bilden. Dabei ist es
+          unerheblich, wie die Aufteilung (männlich, weiblich, neutral) sortiert ist.
+
+      - typ: hinweis
+        inhalt: |
+          **Unsportliches Verhalten** Abzug in der B Note.
+          Entsprechend der Schwere des Verstoßes mit -0,3 – -1,0
 
   - titel: Startbedingungen und Kürlaufzeiten
     id: startbedingungen

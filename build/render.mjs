@@ -158,8 +158,8 @@ function renderBlock(block) {
         <div class="boegen-grid">
           ${(block.bilder || []).map(b => `
             <figure class="bogen-fig">
-              <img src="${escHtml(b.datei)}" alt="${escHtml(b.titel)}" />
               <figcaption>${escHtml(b.titel)}</figcaption>
+              <img src="${escHtml(b.datei)}" alt="${escHtml(b.titel)}" />
             </figure>
           `).join('')}
         </div>
