@@ -1,0 +1,16 @@
+{
+  "name": "rollsport-ordnungen",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Prüfungsordnung NRW – Inhalte als Daten, Web-Ansicht und druckfertiges PDF",
+  "scripts": {
+    "build": "node build/build.mjs",
+    "build:web": "node build/build.mjs --no-pdf"
+  },
+  "dependencies": {
+    "marked": "^15.0.0",
+    "playwright": "1.63.0",
+    "yaml": "^2.6.0"
+  }
+}
