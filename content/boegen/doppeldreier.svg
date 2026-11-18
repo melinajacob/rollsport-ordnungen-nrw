@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 80">
-  <g fill="none" stroke="#1e1e1e" stroke-width="1.5">
-    <circle cx="55" cy="40" r="35"/>
-    <circle cx="125" cy="40" r="35"/>
-    <!-- Doppeldreier: cusp at top pointing up, cusp at bottom pointing down -->
-    <path d="M 86,18 Q 90,6 94,18"/>
-    <path d="M 86,62 Q 90,74 94,62"/>
-  </g>
-</svg>

@@ -181,55 +181,55 @@ kapitel:
       - typ: boegen
         name: Pflichtbögen-Übersicht
         bilder:
-          - datei: boegen/bogenachter.svg
+          - datei: boegen/bogenachter.png
             titel: Bogenachter
-          - datei: boegen/dreier.svg
+          - datei: boegen/dreier.png
             titel: Dreier
-          - datei: boegen/doppeldreier.svg
+          - datei: boegen/doppeldreier.png
             titel: Doppeldreier
-          - datei: boegen/gegendreier.svg
+          - datei: boegen/gegendreier.png
             titel: Gegendreier
-          - datei: boegen/schlangenbogen.svg
+          - datei: boegen/schlangenbogen.png
             titel: Schlangenbogen
-          - datei: boegen/schlangenbogen-dreier.svg
+          - datei: boegen/schlangenbogen-dreier.png
             titel: Schlangenbogen-Dreier
-          - datei: boegen/schlangenbogen-doppeldreier.svg
+          - datei: boegen/schlangenbogen-doppeldreier.png
             titel: Schlangenbogen-Doppeldreier
-          - datei: boegen/schlangenbogen-gegendreier.svg
+          - datei: boegen/schlangenbogen-gegendreier.png
             titel: Schlangenbogen-Gegendreier
-          - datei: boegen/wende.svg
+          - datei: boegen/wende.png
             titel: Wende
-          - datei: boegen/gegenwende.svg
+          - datei: boegen/gegenwende.png
             titel: Gegenwende
-          - datei: boegen/doppeldreier-wende.svg
+          - datei: boegen/doppeldreier-wende.png
             titel: Doppeldreier-Wende
-          - datei: boegen/gegendreier-gegenwende.svg
+          - datei: boegen/gegendreier-gegenwende.png
             titel: Gegendreier - Gegenwende
       - typ: boegen
         name: Pflichtbögen-Übersicht (Fortsetzung)
         neue_seite: true
         bilder:
-          - datei: boegen/schlinge.svg
+          - datei: boegen/schlinge.png
             titel: Schlinge
-          - datei: boegen/schlangenbogen-schlinge.svg
+          - datei: boegen/schlangenbogen-schlinge.png
             titel: Schlangenbogen-Schlinge
-          - datei: boegen/schlingen-paragraph.svg
+          - datei: boegen/schlingen-paragraph.png
             titel: Schlingen-Paragraph
-          - datei: boegen/paragraph.svg
+          - datei: boegen/paragraph.png
             titel: Paragraph
-          - datei: boegen/dreier-paragraph.svg
+          - datei: boegen/dreier-paragraph.png
             titel: Dreier-Paragraph
-          - datei: boegen/doppeldreier-paragraph.svg
+          - datei: boegen/doppeldreier-paragraph.png
             titel: Doppeldreier-Paragraph
-          - datei: boegen/gegendreier-paragraph.svg
+          - datei: boegen/gegendreier-paragraph.png
             titel: Gegendreier-Paragraph
-          - datei: boegen/doppeldreier-wende-paragraph.svg
+          - datei: boegen/doppeldreier-wende-paragraph.png
             titel: Doppeldreier-Wende-Paragraph
-          - datei: boegen/gegenwende-wende-paragraph.svg
+          - datei: boegen/gegenwende-wende-paragraph.png
             titel: Gegenwende-Wende-Paragraph
-          - datei: boegen/doppeldreier-gegenwende-paragraph.svg
+          - datei: boegen/doppeldreier-gegenwende-paragraph.png
             titel: Doppeldreier-Gegenwende-Paragraph
-          - datei: boegen/gegendreier-gegenwende-paragraph.svg
+          - datei: boegen/gegendreier-gegenwende-paragraph.png
             titel: Gegendreier-Gegenwende-Paragraph
 
   - titel: Kürprüfungen

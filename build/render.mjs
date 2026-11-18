@@ -295,7 +295,7 @@ export function renderPrintPage(doc, slug) {
   <div class="print-cover">
     <div class="cover-saison">Saison ${escHtml(doc.saison || '2026')}</div>
     <div class="cover-logo">
-      <img src="../content/rkb-logo.svg" alt="RKB Logo" onerror="this.style.display='none'" />
+      <img src="../content/rkb-logo.png" alt="RKB Logo" onerror="this.style.display='none'" />
     </div>
     <div class="cover-content">
       <h1>${escHtml(doc.untertitel || doc.titel)}</h1>

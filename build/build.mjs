@@ -42,14 +42,14 @@ if (existsSync(join(CONTENT_DIR, 'wko'))) {
     cpSync(join(CONTENT_DIR, 'wko'), target, { recursive: true });
   }
 }
-const logoSrc = join(CONTENT_DIR, 'rkb-logo.svg');
+const logoSrc = join(CONTENT_DIR, 'rkb-logo.png');
 if (existsSync(logoSrc)) {
   mkdirSync(join(DIST, 'content'), { recursive: true });
-  cpSync(logoSrc, join(DIST, 'content', 'rkb-logo.svg'));
+  cpSync(logoSrc, join(DIST, 'content', 'rkb-logo.png'));
   for (const { slug } of documents) {
     const target = join(DIST, slug, 'content');
     mkdirSync(target, { recursive: true });
-    cpSync(logoSrc, join(target, 'rkb-logo.svg'));
+    cpSync(logoSrc, join(target, 'rkb-logo.png'));
   }
 }
 
