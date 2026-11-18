@@ -67,26 +67,31 @@ kapitel:
       - typ: abschnitt
         titel: "Voraussetzungen"
         inhalt: |
-          - **Lizenzen:** Alle Starter:innen benötigen eine gültige Lizenz
-          - **Prüfungen:** Müssen vor dem Wettbewerb abgelegt sein
+          **Lizenzen:** Alle Starter:innen benötigen eine gültige Rollsportlizenz. Die Meldung muss die Geschlechtsangabe enthalten.
+
+          **Prüfungen:** Ab Nachwuchsklasse nicht als Startbedingung für die Landesmeisterschaft nötig, aber für die Bundesmeisterschaft.
 
       - typ: abschnitt
         titel: "Musiken"
         inhalt: |
-          - Musik mit Gesang ist ab Fortgeschrittene 2 erlaubt
-          - Die Musiklänge muss der Kürlaufzeit der jeweiligen Klasse entsprechen
+          Die Musiklänge muss der vorgegebenen Kürlaufzeit entsprechen. Musik mit Gesang ist ab Fortgeschrittene 2 erlaubt (keine Kraftausdrücke o.ä.).
 
-      - typ: hinweis
+      - typ: abschnitt
+        titel: "Einlaufzeiten"
         inhalt: |
-          **Einlaufzeiten:** Kür = Kürlaufzeit + 1 Minute. Pflicht = 10 Min. + 5 Min.
+          **Kür:** Kürlaufzeit + 1 Minute. A0/A1/A2 = 2:30 Min. 50 Sekunden Puffer.
+
+          **Pflicht:** 10 Min. allgemein + 5 Min. für die ersten 5 Starter.
 
       - typ: abschnitt
         titel: "Kleiderordnung"
         inhalt: |
-          - Strasssteine: max. 4 mm Durchmesser
-          - Haar-/Kopfschmuck erlaubt
-          - Dezentes Make-up erlaubt
-          - Requisiten sind nicht erlaubt
+          - **Kleidung:** Rollkunstlaufkleid oder Anzug mit Bein (einteilig)
+          - **Strasssteine:** Max. 4 mm Durchmesser, aufkleben empfohlen
+          - **Kopfschmuck:** Begrenzt erlaubt (keine Federn, Hüte, Kopftücher, Masken)
+          - **Make-up:** Nicht übertrieben
+          - **Requisiten:** Nicht erlaubt
+          - **Beleuchtung der Kostüme:** Untersagt
 
   - titel: Kürvorgaben
     id: kuervorgaben
@@ -248,66 +253,227 @@ kapitel:
     kopfzeile: Pflichtbögen
     neue_seite: true
     bloecke:
-      - typ: bogenklasse
-        name: "Anfänger A0"
-        boegen:
-          - "1 Pflichtfigur (Bogenachter)"
-          - "Max. Punktzahl: 4,2 (0,7 / Kreis)"
-
-      - typ: bogenklasse
-        name: "Anfänger A1"
-        boegen:
-          - "2 Pflichtfiguren"
-          - "Max. Punktzahl: 4,2 (0,7 / Kreis)"
-
-      - typ: bogenklasse
-        name: "Anfänger A2"
-        boegen:
-          - "2 Pflichtfiguren"
-          - "Max. Punktzahl: 4,8 (0,8 / Kreis)"
-
-      - typ: bogenklasse
-        name: "Fortgeschrittene 1"
-        boegen:
-          - "3 Pflichtfiguren"
-          - "Max. Punktzahl: 5,4 (0,9 / Kreis)"
-
-      - typ: bogenklasse
-        name: "Fortgeschrittene 2"
-        boegen:
-          - "3 Pflichtfiguren"
-          - "Max. Punktzahl: 6,0 (1,0 / Kreis)"
-
-      - typ: bogenklasse
-        name: "Nachwuchsklasse (G1/G2/Hallenpflicht)"
-        neue_seite: true
-        boegen:
-          - "4 Pflichtfiguren je Gruppe"
-          - "Max. Punktzahl: 7,2 (1,2 / Kreis)"
-
-      - typ: bogenklasse
-        name: "Juniorenklasse (J1–J4/Hallenpflicht)"
-        boegen:
-          - "3–4 Pflichtfiguren"
-          - "Max. Punktzahl: 8,4 (1,4 / Kreis)"
-
-      - typ: bogenklasse
-        name: "Meisterklasse (M1–M4)"
-        boegen:
-          - "4 Pflichtfiguren"
-          - "Max. Punktzahl: 9,0 (1,5 / Kreis)"
-
-      - typ: bogenklasse
-        name: "Meisterklasse Elite (ME1–ME4)"
-        boegen:
-          - "3 Pflichtfiguren"
-          - "Max. Punktzahl: 10,0 (2,5 / Kreis + 1,6 / Schlinge)"
-
-      - typ: hinweis
+      - typ: abschnitt
+        titel: "Anfänger- und Fortgeschrittene"
         inhalt: |
-          Details zu den einzelnen Pflichtfiguren je Klasse und Gruppe sind in der vollständigen
-          Meisterschaftsordnung nachzulesen. Die Spielbeindrehung vor/nach Pflichtdrehungen ist
-          als Referenztabelle verfügbar.
+          **A0** – Max. 4,2 (0,7 pro Kreis)
+
+          | Nr | Figur | Wertung |
+          |----|-------|---------|
+          | 1 | Bogenachter Rva-Lva | 0,7/Kreis |
+
+          **A1** – Max. 4,2 (0,7 pro Kreis)
+
+          | Nr | Figur | Wertung |
+          |----|-------|---------|
+          | 1 | Bogenachter Rva-Lva | 0,7/Kreis |
+          | 2 | Bogenachter Rve-Lve | 0,7/Kreis |
+
+          **A2** – Max. 4,8 (0,8 pro Kreis)
+
+          | Nr | Figur | Wertung |
+          |----|-------|---------|
+          | 7 | Dreier (Fuchsdreier) Rva-Lva | 0,5/Dreier |
+          | 9 | Dreier ve/ra | 0,5/Dreier |
+
+          **F1** – Max. 5,4 (0,9 pro Kreis)
+
+          | Nr | Figur | Wertung |
+          |----|-------|---------|
+          | 3 | Bogenachter Rra | — |
+          | 8 | Dreier va/re | 0,6/Dreier |
+          | 11 | Doppeldreier Rve | 0,3/Dreier |
+
+          **F2** – Max. 6,0 (1,0 pro Kreis)
+
+          | Nr | Figur | Wertung |
+          |----|-------|---------|
+          | 4 | Bogenachter Rre | 0,3/Dreier |
+          | 10 | Doppeldreier Rva | 0,5/Dreier |
+          | 14 | Schlinge Rva | 0,6/Schlinge |
+
+      - typ: abschnitt
+        titel: "Abzüge Pflichtfiguren (Dreier)"
+        inhalt: |
+          | Fehler | Abzug |
+          |--------|-------|
+          | Leichte Drehung innerhalb | -0,2 |
+          | Leichte falsche Kante / Drehung innerhalb / leichte Drehung außerhalb | -0,3 |
+          | Schwere falsche Kante / Drehung außerhalb | -0,4 |
+          | Gehoben / falsche Achse | -0,5 |
+
+      - typ: abschnitt
+        titel: "Nachwuchsklasse"
+        neue_seite: true
+        inhalt: |
+          **G1** – Max. 7,2 (1,2 pro Kreis)
+
+          | Nr | Figur | Richtung | Wertung |
+          |----|-------|----------|---------|
+          | 26 | Schlangenbogen - Dreier | .va | 0,6 pro Dreier |
+          | 19 | Gegendreier | .ve | 0,8 pro Gegendreier |
+          | 22 | Gegenwende | .va | 0,8 pro Gegenwende |
+          | 15 | Schlinge | Rve | 0,8 pro Schlinge |
+
+          **G2** – Max. 7,2 (1,2 pro Kreis)
+
+          | Nr | Figur | Richtung | Wertung |
+          |----|-------|----------|---------|
+          | 13 | Doppeldreier | Rre | 0,4 pro Dreier |
+          | 32 | Schlangenbogen-Gegendreier | .va | 0,4 pro Dreier |
+          | 23 | Gegenwende | .ve | 0,8 pro Gegenwende |
+          | 30 | Schlangenbogen-Schlinge | .va | 0,8 pro Schlinge |
+
+          **Hallenpflicht** – Max. 7,2 (1,2 pro Kreis)
+
+          | Nr | Figur | Richtung | Wertung |
+          |----|-------|----------|---------|
+          | 13 | Doppeldreier | Rre | 0,4 pro Dreier |
+          | 19 | Gegendreier | .ve | 0,8 pro Gegendreier |
+          | 23 | Gegenwende | .ve | 0,8 pro Gegenwende |
+          | 15 | Schlinge | Rve | 0,8 pro Schlinge |
+
+      - typ: abschnitt
+        titel: "Juniorenklasse"
+        inhalt: |
+          **J1** – Max. 8,4 (1,4 pro Kreis)
+
+          | Nr | Figur | Richtung | Wertung |
+          |----|-------|----------|---------|
+          | 44 | Wende-Doppeldreier | .ve | 0,3 pro Element |
+          | 32 | Schlangenbogen - Gegendreier | .va | 0,9 pro Gegendreier |
+          | 16a | Schlinge | Rra | 1,0 pro Schlinge |
+
+          **J2** – Max. 8,4 (1,4 pro Kreis)
+
+          | Nr | Figur | Richtung | Wertung |
+          |----|-------|----------|---------|
+          | 21 | Wende | .ve | 0,9 pro Wende |
+          | 44 | Wende-Doppeldreier | .ve | 0,3 pro Element |
+          | 30 | Schlangenbogen-Schlinge | .va | 1,0 pro Schlinge |
+
+          **J3** – Max. 8,4 (1,4 pro Kreis)
+
+          | Nr | Figur | Richtung | Wertung |
+          |----|-------|----------|---------|
+          | 42 | Gegenwende - Gegendreier | .va | 0,5 pro Element |
+          | 36 | Doppeldreier - Paragraph | .va | 0,4 pro Dreier |
+          | 16a | Schlinge | Rra | 1,0 pro Schlinge |
+
+          **J4** – Max. 8,4 (1,4 pro Kreis)
+
+          | Nr | Figur | Richtung | Wertung |
+          |----|-------|----------|---------|
+          | 23 | Gegenwende | .ve | 0,9 pro Gegenwende |
+          | 42 | Gegenwende-Gegendreier | .va | 0,5 pro Dreier |
+          | 17a | Schlinge | Rre | 1,0 pro Schlinge |
+
+          **Hallenpflicht** – Max. 8,4 (1,4 pro Kreis)
+
+          | Nr | Figur | Richtung | Wertung |
+          |----|-------|----------|---------|
+          | 21 | Wende | .ve | 0,9 pro Wende |
+          | 18 | Gegendreier | .va | 0,9 pro Gegenwende |
+          | 22 | Gegenwende | .va | 1,0 pro Schlinge |
+          | 30 | Schlangenbogen-Schlinge | .va | 1,0 pro Schlinge |
+
+      - typ: abschnitt
+        titel: "Meisterklasse"
+        neue_seite: true
+        inhalt: |
+          **M1** – Max. 9,0 (1,5 pro Kreis)
+
+          | Nr | Figur | Richtung | Wertung |
+          |----|-------|----------|---------|
+          | 43 | Wende - Doppeldreier | .va | 0,4 pro Element |
+          | 40 | Gegendreier - Paragraph | .va | 0,5 pro Gegendreier |
+          | 37 | Doppeldreier - Paragraph | .ra | 0,5 pro Dreier |
+          | 17 | Schlinge | Rre | 1,0 pro Schlinge |
+
+          **M2** – Max. 9,0 (1,5 pro Kreis)
+
+          | Nr | Figur | Richtung | Wertung |
+          |----|-------|----------|---------|
+          | 21 | Wende | .ve | 1,0 pro Wende |
+          | 40 | Gegendreier - Paragraph | .va | 0,5 pro Gegendreier |
+          | 43 | Wende - Doppeldreier | .va | 0,4 pro Element |
+          | 31 | Schlangenbogen-Schlinge | .ra | 1,0 pro Schlinge |
+
+          **M3** – Max. 9,0 (1,5 pro Kreis)
+
+          | Nr | Figur | Richtung | Wertung |
+          |----|-------|----------|---------|
+          | 22 | Gegenwende | .va | 1,0 pro Gegenwende |
+          | 33 | Schlangenbogen - Gegendreier | .ve | 1,0 pro Gegendreier |
+          | 43 | Wende - Doppeldreier | .va | 0,4 pro Element |
+          | 38 | Schlingen - Paragraph | .va | 0,5 pro Schlinge |
+
+          **M4** – Max. 9,0 (1,5 pro Kreis)
+
+          | Nr | Figur | Richtung | Wertung |
+          |----|-------|----------|---------|
+          | 23 | Gegenwende | .ve | 1,0 pro Gegenwende |
+          | 33 | Schlangenbogen - Gegendreier | .ve | 1,0 pro Gegendreier |
+          | 43 | Wende - Doppeldreier | .va | 0,4 pro Element |
+          | 38 | Schlingen - Paragraph | .va | 0,5 pro Schlinge |
+
+      - typ: abschnitt
+        titel: "Meisterklasse Elite"
+        inhalt: |
+          **ME1** – Max. 10,0 (2,5 pro Kreis / 1,6 pro Schlinge)
+
+          | Nr | Figur | Richtung | Wertung |
+          |----|-------|----------|---------|
+          | 46 | Doppeldreier - Wende - Paragraph | .va | 0,5 pro Element |
+          | 39 | Schlingen - Paragraph | .ra | 0,5 pro Schlinge |
+          | 47 | Gegendreier - Gegenwende - Paragraph | .va | 0,7 pro Element |
+
+          **ME2** – Max. 10,0 (2,5 pro Kreis / 1,6 pro Schlinge)
+
+          | Nr | Figur | Richtung | Wertung |
+          |----|-------|----------|---------|
+          | 48 | Doppeldreier - Wende - Paragraph | .ra | 0,5 pro Element |
+          | 38 | Schlingen - Paragraph | .va | 0,5 pro Schlinge |
+          | 49 | Gegendreier - Gegenwende - Paragraph | .ra | 0,7 pro Element |
+
+          **ME3** – Max. 10,0 (2,5 pro Kreis / 1,6 pro Schlinge)
+
+          | Nr | Figur | Richtung | Wertung |
+          |----|-------|----------|---------|
+          | 50 | Doppeldreier - Gegenwende - Paragraph | .va | 0,5 pro Element |
+          | 39 | Schlingen - Paragraph | .ra | 0,5 pro Schlinge |
+          | 51 | Gegendreier - Wende - Paragraph | .va | 0,7 pro Element |
+
+          **ME4** – Max. 10,0 (2,5 pro Kreis / 1,6 pro Schlinge)
+
+          | Nr | Figur | Richtung | Wertung |
+          |----|-------|----------|---------|
+          | 52 | Doppeldreier - Gegenwende - Paragraph | .ra | 0,5 pro Element |
+          | 38 | Schlingen - Paragraph | .va | 0,5 pro Schlinge |
+          | 53 | Gegendreier - Wende - Paragraph | .ra | 0,7 pro Element |
+
+      - typ: abschnitt
+        titel: "Spielbeindrehung vor- und nach Pflichtdrehungen"
+        neue_seite: true
+        inhalt: |
+          | Figur | Spielbeinhaltung |
+          |-------|-----------------|
+          | va Dreier | hi / hi |
+          | ve Dreier | hi / hi |
+          | ra Dreier | vo / vo |
+          | re Dreier | vo / vo |
+          | va Gegendreier | hi / vo |
+          | ve Gegendreier | vo / hi |
+          | ra Gegendreier | vo / hi |
+          | re Gegendreier | hi / vo |
+          | va Wende | vo / vo |
+          | ve Wende | hi / vo |
+          | ra Wende | hi / hi |
+          | re Wende | vo / hi |
+          | va Gegenwende | hi / vo |
+          | ve Gegenwende | vo / vo |
+          | ra Gegenwende | vo / hi |
+          | re Gegenwende | hi / hi |
 
   - titel: Wertungsschema Kür
     id: wertungsschema
@@ -334,73 +500,160 @@ kapitel:
 
       - typ: abschnitt
         titel: "Regelverstöße"
+        kasten: hinweis
         inhalt: |
           | Anzahl Verstöße | Abzug A-Note |
           |-----------------|-------------|
-          | 1 | -0,5 |
-          | 2 | -0,7 |
-          | 3 | -1,0 |
+          | 1 Verstoß | -0,5 |
+          | 2 Verstöße | -0,7 |
+          | 3 Verstöße | -1,0 |
+
+          Regelverstöße sind durch den Schiedsrichter festzustellen.
 
       - typ: abschnitt
-        titel: "Sprungwertigkeiten (Auswahl)"
+        titel: "Sprünge – Honorierung"
+        kasten: hinweis
+        inhalt: |
+          Zulässig ist eine 1 1/2-facher Sprung (in A Note honoriert):
+          - 1 1/2 Runden: +0,1
+          - 1 3/4 Runden: +0,2
+
+      - typ: abschnitt
+        titel: "Unsportliches Verhalten"
+        kasten: hinweis
+        inhalt: |
+          Entsprechend der Schwere des Verstoßes mit -0,3 bis -1,0 (Abzug in der B Note)
+
+      - typ: hinweis
+        inhalt: |
+          Wenn einer Kür die Basiselemente fehlen, sie aber ein hohes Element enthält, kann nicht die volle Punktzahl dieses Elements als Basiswert genutzt werden.
+
+      - typ: abschnitt
+        titel: "Sprungwertigkeiten"
         neue_seite: true
         inhalt: |
           | Sprung | Wertigkeit |
           |--------|-----------|
-          | Alle Figuren | 1,2 |
-          | Dreiersprung | 1,2 |
-          | Toeloop | 1,5 |
-          | Salchow | 1,5 |
-          | Flip | 1,8 |
-          | Lutz | 2,0 |
-          | Rittberger | 2,0 |
-          | Axel | 3,0 |
-          | Doppel-Toeloop | 4,5 |
-          | Doppel-Salchow | 4,5 |
-          | Doppel-Flip | 5,5 |
-          | Doppel-Lutz | 6,0 |
-          | Doppel-Rittberger | 6,0 |
+          | Alle Figuren (Waage, Pistole, …) | 1,2 |
+          | Tippsprung | 1,5 |
+          | Drehsprung | 1,6 / 1,7 |
+          | Dreiersprung | 1,8 |
+          | 3 Dreiersprünge | 2,2 |
+          | Toeloop | 2,5 |
+          | Salchow | 2,7 |
+          | Flip | 2,9 |
+          | Lutz | 3,1 |
+          | Rittberger | 3,4 |
+          | 3 Rittberger | 3,7 |
+          | 3/4 Axel | 4,2 |
+          | Axel | 4,5 |
+          | Doppel-Toeloop (leicht vorgedreht) | 5,2 |
+          | Doppel-Salchow | 5,3 |
+          | Doppel-Toeloop (nicht vorgedreht) | 5,5 |
+          | Doppel-Flip | 6,0 |
+          | Doppel-Rittberger | 6,2 |
+          | Doppel-Lutz | 6,5 |
           | Doppel-Axel | 8,7 |
+          | Dreifach-Toeloop | 9,0 |
+          | Dreifach-Salchow | 9,0 |
+
+          Alles, was ein Element offensichtlich erschwert (z.B. Eingang, Arm- oder Körperhaltung, …) erhöht die Wertigkeit um bis zu 0,5 Punkte.
+
+      - typ: abschnitt
+        titel: "Sprungkombinationen"
+        inhalt: |
+          **Doppelsprungkombi (1 Doppelt):**
+
+          | Kombination | Wertigkeit |
+          |-------------|-----------|
+          | Kombi mit D-Toeloop | 7,0 |
+          | Kombi mit D-Salchow | 7,1 – 7,2 |
+          | Axel-Doppelsprung Kombi | 7,3 |
+          | Kombi mit D-Flip | 7,2 – 7,3 |
+          | Kombi mit D-Rittberger | 7,3 – 7,4 |
+
+          **Doppelsprungkombi (2 Doppelt):**
+
+          | Kombination | Wertigkeit |
+          |-------------|-----------|
+          | Kombi mit mind. 2 D-Toeloop | 7,5 – 7,6 |
+          | Kombi mit mind. 1 D-Salchow | 7,6 – 7,7 |
+          | Axelkombi mit 2 D-Sprüngen | 7,8 |
+          | Kombi mit mind. 1 D-Flip | 7,7 – 7,8 |
+          | Kombi mit mind. 1 D-Rittberger | 7,8 |
+          | Kombi mit mind. 2 D-Rittberger | 7,9 |
+
+          Der Wert einer Sprungkombination ist höher als der schwierigste, darin enthaltene Sprung. Zuschlag von max. 1,5 Punkten möglich.
 
           **Sprünge mit 1 1/2 Runden:** +0,1
           **Sprünge mit 1 3/4 Runden:** +0,2
 
       - typ: abschnitt
-        titel: "Pirouettenwertigkeiten (Auswahl)"
+        titel: "Pirouettenwertigkeiten"
         inhalt: |
-          | Pirouette | Wertigkeit | Klasse |
-          |-----------|-----------|--------|
-          | Zweibeinpirouette | 1,5 | — |
-          | Tscherkessen/Sit behind | 3,8 | B |
-          | Sitzpirouette re/ra | 3,8 | B |
-          | Sitzpirouette sideways/Twist | 4,8 | B |
-          | Standpirouette forward | 5,0 | B |
-          | Layback | 5,0 | B |
-          | Layover | 5,7 | B |
-          | Torso sideways | 6,0 | B |
-          | Camel forward (Spielbein gehalten) | 6,5 | B |
-          | Split | 6,5 | B |
-          | Hacke va | 6,5 | A |
-          | Camel sideways "Donut" | 6,7 | B |
-          | Hacke ra | 6,7 | A |
-          | Biellmann | 7,6–7,7 | B |
-          | Inverted | 8,2 | A |
-          | Bryant | 8,3 | A |
+          | Pirouette | Umdrehungen | Wertigkeit | Klasse |
+          |-----------|-------------|-----------|--------|
+          | Zweibeinpirouette | > 2 | 1,5 | — |
+          | Standpirouette ve/re | > 2 | 2,0 | — |
+          | Libelle / Standpirouette ra | > 2 | 2,7 | — |
+          | Standpirouette auf Hacke | > 2 | 2,9 | — |
+          | Sitzpirouette re | mind. 3 | 3,0 (+0,2 ganz unten) | — |
+          | Sitzpirouette ra | mind. 3 | 3,3 (+0,2 ganz unten) | — |
+          | Tscherkessen-, Sit behind | > 3 | 3,8 | — |
+          | Wechselsitz-Pirouette | mind. 2×2 | 4,0 (+0,2 ganz unten) | — |
+          | Waage ra o. va | > 2 | 4,5 | C |
+          | Sitzpirouette Sideways / Twist | mind. 3 | 4,8 | — |
+          | Standpirouette forward | mind. 3 | 5,0 | — |
+          | Lay-Back ohne Stopper | mind. 3 | 5,0 | — |
+          | Waage ra / re | mind. 3 | 5,0 | B |
+          | Waage va | mind. 3 | 5,3 | B |
+          | Lay-over | mind. 3 | 5,7 | B |
+          | Wechselwaage Kanten-/Fußw. | mind. 3 × 3 | 6,0 | B |
+          | Torso sideways | mind. 3 | 6,0 | — |
+          | Camel forward Spielb. gehalten | mind. 3 | 6,0 | B |
+          | Ein- / umgesprungene Waage | mind. 3 × 3 | 6,2 | B |
+          | Split | mind. 3 | 6,5 | — |
+          | Camel sideways ("Donut") | mind. 3 | 6,7 | B |
+          | Broken Ankle | mind. 3 | 7,3 | A |
+          | Hacke ra | mind. 3 | 7,5 | A |
+          | Biellmann | > 3 | 7,6 – 7,7 | B |
+          | Hacke va | mind. 3 | 7,8 | A |
+          | Inverted flach | mind. 3 | 8,2 | A |
+          | Bryant | mind. 3 | 8,3 | A |
+
+          Der Wert einer Pirouettenkombination ist höher als der Wert des schwierigsten darin enthaltenen Einzelelements. Zuschlag von max. 1,0 Punkten möglich.
 
       - typ: abschnitt
-        titel: "Skating Skills nach Klasse"
+        titel: "Skating Skills"
         neue_seite: true
         inhalt: |
-          | Klasse | Skating Skills |
-          |--------|---------------|
-          | A0 & A1 | 0 – 2,7 |
-          | A2 | 0 – 3,5 |
-          | F1 & F2 | 0 – 3,8 |
-          | NWK | 0 – 4,5 |
-          | Junioren | 0 – 5,3 |
-          | Junioren Elite | 0 – 5,5 |
-          | Meisterklasse | 0 – 6,5 |
-          | Meisterklasse Elite | 0 – 7,5 |
+          In den Skating Skills werden die läuferischen Fähigkeiten bewertet.
+
+          **Anfänger 0 & Anfänger I** (0,00 – 2,7):
+          Abstoßen vorwärts und rückwärts ohne Stopper, Übersetzen rechts und links / vorwärts und rückwärts, Walzer-Dreier, Mohawkschritt, Schwungbögen, Chassé
+
+          **Anfänger II** (0,00 – 3,5):
+          Dreier vorwärts oder rückwärts, Doppeldreier rückwärts, Cross Rolls, Loopstep, Travellings (schnelle, kantenlose Dreierdrehungen – mind. 2 ganze Umdr.), Offener und geschlossener Mohawk
+
+          **Fortgeschrittene I & II** (0,00 – 3,8):
+          Gegendreier jeder Variante
+
+          **Nachwuchsklasse** (0,00 – 4,5):
+          Schlinge auswärts / einwärts bzw. vorwärts/rückwärts, Wende va/ve, Gegenwende va/ve
+
+          **Juniorenklasse** (0,00 – 5,3):
+          Kombinationen der vorgenannten Turns
+
+          **Juniorenklasse Elite (A-Schiene)** (0,00 – 5,5):
+          Kombinationen der vorgenannten Turns
+
+          **Meisterklasse** (0,00 – 6,5):
+          Kombinationen der vorgenannten Turns
+
+          **Meisterklasse Elite (A-Schiene)** (0,00 – 7,5):
+          Kombinationen der vorgenannten Turns
+
+          *Die Wertigkeit der gezeigten Skills richtet sich nach der gezeigten Schwierigkeit der Turns und Bodymovements, der Vielfältigkeit und Kreativität.*
 
   - titel: Übersicht Pirouetten
     id: pirouetten
@@ -410,34 +663,31 @@ kapitel:
       - typ: abschnitt
         titel: "Klasse B – Pirouetten"
         inhalt: |
-          | Pirouette | Wertigkeit |
-          |-----------|-----------|
-          | Tscherkessen / Sit behind | 3,8 |
-          | Sitzpirouette re/ra | 3,8 |
-          | Sitzpirouette sideways / Twist | 4,8 |
-          | Standpirouette forward | 5,0 |
-          | Layback | 5,0 |
-          | Layover | 5,7 |
-          | Torso sideways | 6,0 |
-          | Camel forward (Spielbein gehalten) | 6,5 |
-          | Split | 6,5 |
-          | Camel sideways "Donut" | 6,7 |
-          | Biellmann | 7,6–7,7 |
+          Kürwertungen multipliziert mit Faktor X
+
+          | Pirouette | Umdrehungen | Wertung |
+          |-----------|-------------|---------|
+          | Tscherkessen-, Sit behind | mind. 3 | 3,8 |
+          | Sitzpirouette re / ra, Oberkörper am Bein | mind. 3 | 3,8 |
+          | Sitzpirouette sidways / Twist | mind. 3 | 4,8 |
+          | Standpirouette forward | mind. 3 | 5,0 |
+          | Layback - ohne Stopper | mind. 3 | 5,0 |
+          | Layover | mind. 3 | 5,7 |
+          | Torso sideways | > 3 | 6,0 |
+          | Camel forward Spielbein gehalten | mind. 3 | 6,0 |
+          | Split | mind. 3 | 6,5 |
+          | Camel sideways ("Donut") | mind. 3 | 6,7 |
+          | Biellmann | > 3 | 7,6 – 7,7 |
 
       - typ: abschnitt
         titel: "Klasse A – Pirouetten"
         inhalt: |
-          | Pirouette | Wertigkeit |
-          |-----------|-----------|
-          | Hacke va | 6,5 |
-          | Hacke ra | 6,7 |
-          | Inverted | 8,2 |
-          | Bryant | 8,3 |
-
-      - typ: hinweis
-        inhalt: |
-          Referenzfotos der Pirouettenpositionen sind in der vollständigen
-          Meisterschaftsordnung enthalten.
+          | Pirouette | Umdrehungen | Wertung |
+          |-----------|-------------|---------|
+          | Hacke va (va und ra möglich) | mind. 3 | 6,5 |
+          | Hacke ra | mind. 3 | 6,7 |
+          | Inverted - flacher Oberkörper | mind. 3 | 8,2 |
+          | Bryant | mind. 3 | 8,3 |
 
   - titel: Wettbewerbsanteile
     id: wettbewerbsanteile
@@ -500,49 +750,125 @@ kapitel:
       - typ: abschnitt
         titel: "Kleiderordnung Formation"
         inhalt: |
-          Spezifische Kleiderordnung für Formationen gemäß den Formationsrichtlinien.
+          **Damen:** Röcke oder Hosen (keine Leggings). Bodys nur mit Rock.
+
+          **Herren:** Hosen. Trikots dürfen nicht ärmellos sein, Dekolleté vollständig bedeckt.
+
+          Die Kleidung darf nicht übertrieben sein, kann jedoch den Charakter der Musik unterstreichen. Strasssteine max. 4mm aufkleben empfohlen. Kopfschmuck begrenzt erlaubt (keine Federn, Hüte, Kopftücher, Masken). Make-up nicht übertrieben. Requisiten und Beleuchtung der Kostüme untersagt.
+
+      - typ: abschnitt
+        titel: "Programmaufbau Formation"
+        inhalt: |
+          1. Vokalmusik ist erlaubt
+          2. Ausgeglichenes Programm mit anerkannten Formationselementen (Kreise, Mühlen, Kreuzungen, Blöcke, Linien, Schrittfolgen)
+          3. Übergänge zwischen Elementen klar ausgestaltet
+          4. Die Lauffläche sollte maximal ausgenutzt werden
+          5. Stillstand während der Kür nicht erlaubt (außer choreografischer Stop)
+          6. Bewegungen und Schritte im Einklang mit der Musik
+          7. Tempowechsel sollen zur Originalität beitragen
+
+          **Choreografischer Stop (Junioren- & Meisterklassenformation):** Max. 10 Sekunden, nicht am Anfang oder Ende. Bei Meisterklasse darf eine Hebung eingebaut werden (von der Gruppe, nicht nur von 2 Läufern).
 
       - typ: abschnitt
         titel: "Bewertung Formation"
         neue_seite: true
         inhalt: |
-          **A-Note (Technik):** 1,0 – 10,0
+          **A-Note:** Technischer Wert. Basisnote 1,0, Gesamtnote 1,0 – 10,0. Schwierigkeitsgrad der Elemente bewerten.
 
-          **B-Note (Harmonie):** A-Note ± 1,5
+          **B-Note:** Harmonie und künstlerischer Eindruck. Grundlage A-Note, Abweichung ± 1,5.
 
-          **Bewertete Elemente:**
+          Bewertungskriterien: Präzision der Elemente, Gleichmäßigkeit/Synchronität, Geschwindigkeit und Fluss, Originalität, Platzverteilung, Läuferische Qualität.
 
-          | Element | Kürzel |
-          |---------|--------|
-          | Kreise | K1–K4 |
-          | Mühlen | M1–M4 |
-          | Blöcke | B1–B4 |
-          | Kreuzungen | KG1–KG4 |
-          | Linien | L1–L4 |
-          | Schritte | S1–S4 |
-          | Handhaltungen | H1–H4 |
+      - typ: abschnitt
+        titel: "Formationselemente – Kreise"
+        inhalt: |
+          | Stufe | Beschreibung | Wertung | Kriterien |
+          |-------|-------------|---------|-----------|
+          | K1 | Ohne Richtungswechsel, ohne Variation der Kreisgröße | 0,1 – 2,0 | Figur, vw./rw., Armhaltung, einfache Schritte |
+          | K2 | Ohne Richtungswechsel mit Variationen in der Größe | 2,1 – 4,2 | Ohne direkte Handhaltung (offener Kreis) + K1 |
+          | K3 | Mit Richtungswechsel & Schrittfolgen / Kreuzungen / Wanderung | 4,3 – 6,6 | Schwierigkeit Schritte, Anzahl Personen die kreuzen + K2 |
+          | K4 | Mit Schrittelementen & Kreuzungen & wandern | 6,6 – 9,0 | Wanderstrecke + K3 |
+
+      - typ: abschnitt
+        titel: "Formationselemente – Mühlen"
+        inhalt: |
+          | Stufe | Beschreibung | Wertung | Kriterien |
+          |-------|-------------|---------|-----------|
+          | M1 | 2 oder mehr Speichen, ein Drehmittelpunkt | 0,1 – 2,0 | Figur, vw./rw., Armhaltung, einfache Schritte, Umdrehungen |
+          | M2 | Mehr als ein Drehpunkt (Doppelmühle / schneidende Mühlen), S-Mühle | 2,1 – 4,2 | Figur, vw./rw., Armhaltung, einfache Schritte, Umdrehungen |
+          | M3 | Kombination M1 & M2 oder Mühle mit offener Mitte | 4,3 – 6,6 | Anzahl der Wechsel in der Mühlenart |
+          | M4 | M1, M2, M3 plus Wandern | 6,6 – 9,0 | Wanderstrecke + M2/M3 |
+
+      - typ: abschnitt
+        titel: "Formationselemente – Blöcke, Kreuzungen, Linien"
+        inhalt: |
+          **Blöcke:**
+
+          | Stufe | Beschreibung | Wertung |
+          |-------|-------------|---------|
+          | B1 | Angefasst, senkrecht zur Mittelachse, mind. 2 Reihen | 0,1 – 2,0 |
+          | B2 | Mehrere Achsen diagonal und senkrecht, offener Block | 2,1 – 4,2 |
+          | B3 | Offen mit Schrittelementen | 4,3 – 6,6 |
+          | B4 | Pivotblock mit Schrittelementen | 6,6 – 9,0 |
+
+          **Kreuzungen:**
+
+          | Stufe | Beschreibung | Wertung |
+          |-------|-------------|---------|
+          | KG1 | Mind. 2 Reihen mit einer Kreuzlinie (gerade/diagonal) | 0,1 – 2,0 |
+          | KG2 | Mehrere Reihen mit mehreren Kreuzlinien (4eck / 3eck) | 2,1 – 4,2 |
+          | KG3 | Mehrere Reihen mit diagonaler Kreuzlinie, aufschlagende Kreise | 4,3 – 6,6 |
+          | KG4 | KG2/KG3 mit Schrittelementen, aufschlagende Kreise mit Drehung | 6,6 – 9,0 |
+
+          **Linien mit Schrittfolge:**
+
+          | Stufe | Beschreibung | Wertung |
+          |-------|-------------|---------|
+          | L1 | Beibehaltung einer Achse, einfache Schritte | 0,1 – 2,0 |
+          | L2 | Wechsel Anzahl der Linien, Beibehaltung einer Achse | 2,1 – 4,2 |
+          | L3 | Änderung der Achse + Schritte (Doppeldreier, Mohawk, Choctow, Dreier) | 4,3 – 6,6 |
+          | L4 | Änderung der Achse + Schritte (Wende, Gegenwende, Gegendreier, 180°, Crossrolls) | 6,6 – 9,0 |
+
+      - typ: abschnitt
+        titel: "Weitere Bewertungsmerkmale Formation"
+        inhalt: |
+          **Schritte:**
+
+          | Stufe | Beschreibung |
+          |-------|-------------|
+          | S1 | Mohawk, Choctow, Dreier |
+          | S2 | S1 + Doppeldreier |
+          | S3 | S2 + Wenden, Gegenwenden, Gegendreier |
+          | S4 | S2 & S3 + Drehungen 180°, Crossrolls |
+
+          **Handhaltungen:**
+
+          | Stufe | Beschreibung |
+          |-------|-------------|
+          | H1 | Handgelenk, Hand-in-Hand, Oberarm |
+          | H2 | H1 + Arme im Winkel, Arm an Ellbogen |
+          | H3 | H2 + Kettengriff, Kreuzgriff |
+          | H4 | H1 – H3 + offene Haltung (mind. 3 Sekunden) |
 
       - typ: abschnitt
         titel: "Abzüge Formation"
         inhalt: |
-          | Abzugsgrund | Abzug |
-          |------------|-------|
-          | Sturz (leicht) | -0,2 |
-          | Sturz (schwer) | -1,0 |
-          | Programmaufbau | variabel |
+          **Stürze:**
 
-      - typ: abschnitt
-        titel: "Programmaufbau"
-        inhalt: |
-          7 Regeln für die Komposition:
+          | Situation | Abzug |
+          |-----------|-------|
+          | Kurzer Sturz von einem Läufer | 0,2 |
+          | Längerer Sturz oder kurzer Sturz mit mehreren Läufern | 0,6 |
+          | Mehr als ein Läufer für eine längere Zeit | 0,8 – 1,0 |
 
-          1. Ausgewogene Verteilung der Elemente
-          2. Nutzung der gesamten Lauffläche
-          3. Vielfalt der Formationen
-          4. Übergänge zwischen den Formationen
-          5. Synchronität der Gruppe
-          6. Ausdruck und Musikinterpretation
-          7. Schwierigkeitsgrad angemessen zur Klasse
+          **Programmaufbau:**
+
+          | Situation | Abzug |
+          |-----------|-------|
+          | Stillstand / Liegen auf der Fläche | 0,2 pro Element |
+          | Programm zu lang / zu kurz | 0,2 pro 10 Sekunden |
+          | Sprünge mit mehr als einer Drehung | 0,4 |
+          | Nicht erlaubte Hebung | 0,4 |
 
   - titel: Begriffserläuterungen
     id: begriffe
@@ -551,65 +877,62 @@ kapitel:
     bloecke:
       - typ: abschnitt
         titel: "Schrittfolge"
-        inhalt: |
-          Eine festgelegte Abfolge von Schritten und Drehungen, die in einer bestimmten Form
-          (Kreis, Diagonal, Serpentine oder Längs) ausgeführt wird.
+        inhalt: Eine Abfolge von reinen Schritten
 
       - typ: abschnitt
         titel: "Choreo-Step Sequenz"
-        inhalt: |
-          Eine choreografische Schrittfolge, die Elemente wie Drehungen, Body Movements
-          und Schritte verbindet und als Einheit bewertet wird.
+        inhalt: Eine Abfolge von Schritten, Figuren oder ein Tanz auf der Stelle
 
       - typ: abschnitt
-        titel: "3-Quadrantenregel"
+        titel: "3 Quadrantenregel"
         inhalt: |
-          Die Schrittfolge muss mindestens 3 der 4 Quadranten der Lauffläche abdecken.
+          Die Lauffläche wird in vier Quadrate aufgeteilt. Bei dieser Regelung muss die gelaufene Schrittfolge mind. durch 3 dieser Quadrate laufen
 
       - typ: abschnitt
-        titel: "Start- und Stop-Position"
+        titel: "Start/Stop Position"
         inhalt: |
-          Definierte Positionen zu Beginn und am Ende eines Kürlaufs.
+          Hierbei soll eine Schrittfolge aus dem Stand begonnen werden und darf in beliebiger Position auslaufen
 
       - typ: abschnitt
         titel: "Figurenserpentine"
-        inhalt: |
-          Eine Schrittfolge in Serpentinenform über die Lauffläche.
+        inhalt: Die Darbietung einer Figur in einer S-(Schlangen)förmigen Form
 
       - typ: abschnitt
         titel: "Merkmale eines Gruppenlaufs"
         neue_seite: true
         inhalt: |
           **Technik:**
-          - Synchrone Ausführung der Elemente
-          - Gleichmäßige Abstände zwischen den Läufern
+          - Alle machen das gleiche Element
+          - Synchronität
+          - Gruppenelemente
+          - Kein lautes Vorzählen
 
-          **Choreografie:**
-          - Gemeinsame Gestaltung des Programms
-          - Interaktion der Läufer untereinander
+          **Choreo:**
+          - Lauffläche muss genutzt werden
+          - Richtungswechsel
+          - Akrobatisches Element
+          - Geschlossenheit
+          - Positionsvariationen
 
           **Wertung:**
-          - A-Note für technische Ausführung
-          - B-Note für künstlerische Gestaltung
+          - 3 müssen das Element richtig zeigen, kein Sturz
+          - Je enger die Läufer:innen zusammen stehen, desto höher die Wertigkeit
+          - Elemente, die nicht von allen Läufer:innen im Sichtfeld der WR gezeigt werden, sind nicht wertbar
+          - Vorgeschriebene Elemente müssen beachtet werden
 
       - typ: abschnitt
-        titel: "Pirouetten – Bewertungskriterien"
+        titel: "Pirouetten – Bewertungsmerkmale"
         inhalt: |
-          **Anlauf:** Vorbereitung der Pirouette
+          Eine Pirouette besteht aus den folgenden Merkmalen:
 
-          **Eingang:** Übergang in die Drehung
-
-          **Zentrierung:** Stabilität des Drehpunkts
-
-          **Kante:** Korrekte Kantenführung
-
-          **Umdrehungen:** Anzahl der vollständigen Drehungen
-
-          **Wechsel:** Übergang zwischen Positionen
-
-          **Position:** Haltung während der Drehung
-
-          **Auslauf:** Kontrolle nach der Pirouette
+          - **Anlauf**
+          - **Eingang**
+          - **Zentrierung**
+          - **Kante**
+          - **Umdrehungen**
+          - **Wechsel** – Füße werden eng gesetzt, schneller Positionswechsel
+          - **Position** – Schnell in neue Position
+          - **Auslauf** – Nicht über den Stopper
 
   - titel: Anfänger Kürpokal
     id: kuerpokall
@@ -619,19 +942,18 @@ kapitel:
       - typ: abschnitt
         titel: "Anfänger Kürpokal"
         inhalt: |
-          Der Anfänger Kürpokal richtet sich an Anfänger 1 und Anfänger 2, aufgeteilt
-          nach Altersgruppen.
+          Der Kürpokal ist ein Wettbewerb für die Anfängerklassen (Anfänger 1 und Anfänger 2). Es gibt ausschließlich Einzelwettbewerbe. Die Läufer:innen werden dabei nach Jahrgängen eingeteilt und treten gegen gleichaltrige Konkurrent:innen an.
 
           | | |
           |---|---|
-          | Kürlaufzeit | 01:30 – 02:00 |
-          | Einlaufzeit | 02:30 |
-          | Prüfungen | Keine erforderlich |
+          | **Kürlaufzeit** | 01:30 – 02:00 min |
+          | **Einlaufzeit** | 02:30 min |
+          | **Prüfungen** | Keine erforderlich |
+          | **Kürvorgaben** | Keine Beschränkungen (abwechslungsreich, Kombination aus Figuren, Schritten, Sprüngen und Pirouetten) |
 
       - typ: hinweis
         inhalt: |
-          Am Anfänger Kürpokal dürfen nur Läufer:innen teilnehmen, die **nicht**
-          an der Landesmeisterschaft oder am A0-Sonderwettbewerb gemeldet sind.
+          Alle Läufer:innen, die in der vorherigen Saison **nicht** bei den Landesmeisterschaften gestartet sind oder in der Klasse A0 gestartet sind, dürfen teilnehmen.
 
   - titel: Ansprechpartner
     id: ansprechpartner-wko
