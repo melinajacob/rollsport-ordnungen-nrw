@@ -1,0 +1,279 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary: #1a3a5c;
+  --color-primary-light: #2d5f8a;
+  --color-accent: #c8102e;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f5f6f8;
+  --color-text: #1e1e1e;
+  --color-text-light: #555;
+  --color-border: #d0d5dd;
+  --color-hinweis-bg: #eef4fb;
+  --color-hinweis-border: #2d5f8a;
+  --color-kasten-grau: #f0f1f3;
+  --color-kasten-rosa: #fdf0f2;
+  --color-kasten-rosa-border: #e8a0aa;
+  --color-link: #1a5fa8;
+  --radius: 6px;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --font: 'Outfit', system-ui, -apple-system, sans-serif;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+body {
+  font-family: var(--font);
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; margin-top: 0.5em; margin-bottom: 0.4em; }
+h3 { font-size: 1.15rem; margin-top: 0.4em; margin-bottom: 0.3em; }
+
+a { color: var(--color-link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+p { margin-bottom: 0.6em; }
+p:last-child { margin-bottom: 0; }
+
+ul, ol { padding-left: 1.4em; margin-bottom: 0.6em; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.6em 0;
+  font-size: 0.95rem;
+}
+
+th, td {
+  padding: 0.4em 0.6em;
+  border: 1px solid var(--color-border);
+  text-align: left;
+}
+
+th {
+  background: var(--color-bg-alt);
+  font-weight: 600;
+}
+
+thead:empty,
+thead tr:empty {
+  display: none;
+}
+
+th:empty ~ th:empty {
+  display: none;
+}
+
+.block {
+  margin-bottom: 1.2em;
+}
+
+.block-hinweis {
+  display: flex;
+  gap: 0.75em;
+  padding: 0.8em 1em;
+  background: var(--color-hinweis-bg);
+  border-left: 4px solid var(--color-hinweis-border);
+  border-radius: var(--radius);
+}
+
+.hinweis-icon {
+  font-size: 1.2em;
+  flex-shrink: 0;
+  line-height: 1.6;
+}
+
+.block-pruefung {
+  padding: 0.8em 1em;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-bg);
+}
+
+.pruefung-name {
+  color: var(--color-primary);
+}
+
+.pruefung-elemente {
+  margin: 0.6em 0 0.8em 1.4em;
+}
+
+.pruefung-elemente li {
+  margin-bottom: 0.2em;
+}
+
+.pruefung-wertung {
+  margin-top: 0.6em;
+  padding: 0.6em 0.8em;
+  background: var(--color-bg-alt);
+  border-radius: var(--radius);
+}
+
+.wertung-table {
+  width: auto;
+  margin: 0 0 0.5em;
+  font-size: 0.9rem;
+}
+
+.wertung-table td:first-child {
+  font-weight: 500;
+  padding-right: 1.5em;
+  border: none;
+  background: transparent;
+}
+
+.wertung-table td:last-child {
+  border: none;
+  background: transparent;
+}
+
+.noten-table {
+  font-size: 0.85rem;
+  width: auto;
+}
+
+.noten-table th {
+  font-weight: 500;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 0.3em 0.6em;
+}
+
+.noten-table td {
+  text-align: center;
+  padding: 0.3em 0.6em;
+}
+
+.pruefung-bestanden {
+  margin-top: 0.4em;
+  padding: 0.3em 0.6em;
+  background: var(--color-bg-alt);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+}
+
+.block-abschnitt.kasten-grau {
+  padding: 0.8em 1em;
+  background: var(--color-kasten-grau);
+  border-radius: var(--radius);
+}
+
+.block-abschnitt.kasten-rosa {
+  padding: 0.8em 1em;
+  background: var(--color-kasten-rosa);
+  border-left: 4px solid var(--color-kasten-rosa-border);
+  border-radius: var(--radius);
+}
+
+.block-vorgabe {
+  padding: 0.8em 1em;
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-accent);
+  border-radius: var(--radius);
+}
+
+.vorgabe-regeln {
+  list-style: disc;
+  margin: 0.4em 0 0.4em 1.4em;
+}
+
+.block-startbedingungen {
+  padding: 0.8em 1em;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.startbed-table {
+  width: auto;
+  margin: 0.4em 0;
+}
+
+.startbed-table td:first-child {
+  width: 140px;
+}
+
+.block-boegen .boegen-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.bogen-fig {
+  text-align: center;
+}
+
+.bogen-fig img {
+  max-width: 200px;
+  height: auto;
+}
+
+.block-pirouette {
+  display: flex;
+  gap: 1.5em;
+  align-items: flex-start;
+}
+
+.pirouette-bild img {
+  max-width: 180px;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+.block-bild img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+.bild-caption {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  text-align: center;
+  margin-top: 0.4em;
+}
+
+.block-kontakte {
+  display: grid;
+  gap: 1em;
+}
+
+.kontakt {
+  padding: 0.6em 0.8em;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.kontakt-rolle {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-primary);
+}
+
+.kontakt-name {
+  margin-top: 0.1em;
+}
+
+.kontakt-adresse,
+.kontakt-telefon,
+.kontakt-email {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+}

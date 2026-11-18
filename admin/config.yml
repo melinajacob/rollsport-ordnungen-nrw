@@ -1,0 +1,267 @@
+backend:
+  name: github
+  repo: melinajacob/rollsport-ordnungen-nrw
+  branch: main
+
+media_folder: content
+public_folder: /content
+
+collections:
+  - name: pruefungsordnung
+    label: Prüfungsordnung
+    files:
+      - name: pruefungsordnung
+        label: Prüfungsordnung
+        file: content/pruefungsordnung.yml
+        fields:
+          - { name: titel, label: Titel, widget: string }
+          - { name: untertitel, label: Untertitel, widget: string }
+          - { name: stand, label: Stand, widget: string }
+          - name: kapitel
+            label: Kapitel
+            widget: list
+            fields:
+              - { name: titel, label: Titel, widget: string }
+              - { name: id, label: Anker-ID, widget: string }
+              - { name: kopfzeile, label: Kopfzeile (PDF), widget: string, required: false }
+              - { name: neue_seite, label: Neue Seite (PDF), widget: boolean, required: false }
+              - name: bloecke
+                label: Blöcke
+                widget: list
+                types:
+                  - name: freitext
+                    label: Freitext
+                    widget: object
+                    fields:
+                      - { name: typ, label: Typ, widget: hidden, default: freitext }
+                      - { name: inhalt, label: Inhalt, widget: markdown }
+                      - { name: neue_seite, label: Neue Seite, widget: boolean, required: false }
+                      - { name: kopfzeile, label: Kopfzeile, widget: string, required: false }
+                  - name: hinweis
+                    label: Hinweis
+                    widget: object
+                    fields:
+                      - { name: typ, label: Typ, widget: hidden, default: hinweis }
+                      - { name: inhalt, label: Inhalt, widget: markdown }
+                  - name: pruefung
+                    label: Prüfung
+                    widget: object
+                    fields:
+                      - { name: typ, label: Typ, widget: hidden, default: pruefung }
+                      - { name: name, label: Name, widget: string }
+                      - { name: elemente, label: Elemente, widget: list, field: { name: element, widget: string }, required: false }
+                      - { name: beschreibung, label: Beschreibung, widget: markdown, required: false }
+                      - name: wertung
+                        label: Wertung
+                        widget: object
+                        required: false
+                        fields:
+                          - { name: mindestpunktzahl, label: Mindestpunktzahl, widget: string }
+                          - { name: durchschnittswert, label: Durchschnittswert, widget: string }
+                          - { name: keine_note_unter, label: Keine Note unter, widget: string, required: false }
+                          - name: noten
+                            label: Noten
+                            widget: object
+                            required: false
+                            fields:
+                              - { name: sehr_gut, label: Sehr gut, widget: string }
+                              - { name: gut, label: Gut, widget: string }
+                              - { name: befriedigend, label: Befriedigend, widget: string }
+                              - { name: ausreichend, label: Ausreichend, widget: string }
+                              - { name: mangelhaft, label: Mangelhaft, widget: string }
+                      - { name: neue_seite, label: Neue Seite, widget: boolean, required: false }
+                  - name: abschnitt
+                    label: Abschnitt
+                    widget: object
+                    fields:
+                      - { name: typ, label: Typ, widget: hidden, default: abschnitt }
+                      - { name: titel, label: Titel, widget: string, required: false }
+                      - { name: inhalt, label: Inhalt, widget: markdown }
+                      - { name: kasten, label: Kasten, widget: select, options: ['', 'grau', 'rosa'], required: false }
+                      - { name: spalte2, label: Zweite Spalte, widget: markdown, required: false }
+                      - { name: neue_seite, label: Neue Seite, widget: boolean, required: false }
+                      - { name: kopfzeile, label: Kopfzeile, widget: string, required: false }
+                  - name: vorgabe
+                    label: Kürvorgabe
+                    widget: object
+                    fields:
+                      - { name: typ, label: Typ, widget: hidden, default: vorgabe }
+                      - { name: name, label: Name, widget: string }
+                      - { name: regeln, label: Regeln, widget: list, field: { name: regel, widget: string } }
+                      - { name: pruefung, label: Prüfungsinhalt, widget: markdown, required: false }
+                      - { name: musik, label: Musik, widget: string, required: false }
+                      - { name: neue_seite, label: Neue Seite, widget: boolean, required: false }
+                  - name: startbedingungen
+                    label: Startbedingungen
+                    widget: object
+                    fields:
+                      - { name: typ, label: Typ, widget: hidden, default: startbedingungen }
+                      - { name: klasse, label: Klasse, widget: string }
+                      - { name: alter, label: Alter, widget: string }
+                      - { name: voraussetzung, label: Voraussetzung, widget: string }
+                      - { name: programm, label: Programm, widget: markdown, required: false }
+                  - name: boegen
+                    label: Pflichtbogen-Zeichnungen
+                    widget: object
+                    fields:
+                      - { name: typ, label: Typ, widget: hidden, default: boegen }
+                      - { name: name, label: Name, widget: string }
+                      - name: bilder
+                        label: Bilder
+                        widget: list
+                        fields:
+                          - { name: datei, label: Datei, widget: image }
+                          - { name: titel, label: Titel, widget: string }
+                  - name: pirouette
+                    label: Pirouette
+                    widget: object
+                    fields:
+                      - { name: typ, label: Typ, widget: hidden, default: pirouette }
+                      - { name: name, label: Name, widget: string }
+                      - { name: beschreibung, label: Beschreibung, widget: markdown }
+                      - { name: bild, label: Bild, widget: image, required: false }
+                  - name: bild
+                    label: Bild
+                    widget: object
+                    fields:
+                      - { name: typ, label: Typ, widget: hidden, default: bild }
+                      - { name: datei, label: Datei, widget: image }
+                      - { name: titel, label: Titel, widget: string, required: false }
+                  - name: bogenklasse
+                    label: Bogenklasse
+                    widget: object
+                    fields:
+                      - { name: typ, label: Typ, widget: hidden, default: bogenklasse }
+                      - { name: name, label: Name, widget: string }
+                      - { name: boegen, label: Bögen, widget: list, field: { name: bogen, widget: string } }
+                      - { name: neue_seite, label: Neue Seite, widget: boolean, required: false }
+                  - name: kontakte
+                    label: Kontakte
+                    widget: object
+                    fields:
+                      - { name: typ, label: Typ, widget: hidden, default: kontakte }
+                      - name: eintraege
+                        label: Einträge
+                        widget: list
+                        fields:
+                          - { name: rolle, label: Rolle, widget: string }
+                          - { name: name, label: Name, widget: string }
+                          - { name: adresse, label: Adresse, widget: string, required: false }
+                          - { name: telefon, label: Telefon, widget: string, required: false }
+                          - { name: email, label: E-Mail, widget: string, required: false }
+
+  - name: wettkampfordnung
+    label: Wettkampfordnung
+    files:
+      - name: wettkampfordnung
+        label: Wettkampfordnung
+        file: content/wettkampfordnung.yml
+        fields:
+          - { name: titel, label: Titel, widget: string }
+          - { name: untertitel, label: Untertitel, widget: string }
+          - { name: stand, label: Stand, widget: string }
+          - name: kapitel
+            label: Kapitel
+            widget: list
+            fields:
+              - { name: titel, label: Titel, widget: string }
+              - { name: id, label: Anker-ID, widget: string }
+              - { name: kopfzeile, label: Kopfzeile (PDF), widget: string, required: false }
+              - { name: neue_seite, label: Neue Seite (PDF), widget: boolean, required: false }
+              - name: bloecke
+                label: Blöcke
+                widget: list
+                types:
+                  - name: freitext
+                    label: Freitext
+                    widget: object
+                    fields:
+                      - { name: typ, label: Typ, widget: hidden, default: freitext }
+                      - { name: inhalt, label: Inhalt, widget: markdown }
+                      - { name: neue_seite, label: Neue Seite, widget: boolean, required: false }
+                      - { name: kopfzeile, label: Kopfzeile, widget: string, required: false }
+                  - name: hinweis
+                    label: Hinweis
+                    widget: object
+                    fields:
+                      - { name: typ, label: Typ, widget: hidden, default: hinweis }
+                      - { name: inhalt, label: Inhalt, widget: markdown }
+                  - name: pruefung
+                    label: Prüfung
+                    widget: object
+                    fields:
+                      - { name: typ, label: Typ, widget: hidden, default: pruefung }
+                      - { name: name, label: Name, widget: string }
+                      - { name: elemente, label: Elemente, widget: list, field: { name: element, widget: string }, required: false }
+                      - { name: beschreibung, label: Beschreibung, widget: markdown, required: false }
+                      - name: wertung
+                        label: Wertung
+                        widget: object
+                        required: false
+                        fields:
+                          - { name: mindestpunktzahl, label: Mindestpunktzahl, widget: string }
+                          - { name: durchschnittswert, label: Durchschnittswert, widget: string }
+                          - { name: keine_note_unter, label: Keine Note unter, widget: string, required: false }
+                          - name: noten
+                            label: Noten
+                            widget: object
+                            required: false
+                            fields:
+                              - { name: sehr_gut, label: Sehr gut, widget: string }
+                              - { name: gut, label: Gut, widget: string }
+                              - { name: befriedigend, label: Befriedigend, widget: string }
+                              - { name: ausreichend, label: Ausreichend, widget: string }
+                              - { name: mangelhaft, label: Mangelhaft, widget: string }
+                      - { name: neue_seite, label: Neue Seite, widget: boolean, required: false }
+                  - name: abschnitt
+                    label: Abschnitt
+                    widget: object
+                    fields:
+                      - { name: typ, label: Typ, widget: hidden, default: abschnitt }
+                      - { name: titel, label: Titel, widget: string, required: false }
+                      - { name: inhalt, label: Inhalt, widget: markdown }
+                      - { name: kasten, label: Kasten, widget: select, options: ['', 'grau', 'rosa'], required: false }
+                      - { name: spalte2, label: Zweite Spalte, widget: markdown, required: false }
+                      - { name: neue_seite, label: Neue Seite, widget: boolean, required: false }
+                      - { name: kopfzeile, label: Kopfzeile, widget: string, required: false }
+                  - name: vorgabe
+                    label: Kürvorgabe
+                    widget: object
+                    fields:
+                      - { name: typ, label: Typ, widget: hidden, default: vorgabe }
+                      - { name: name, label: Name, widget: string }
+                      - { name: regeln, label: Regeln, widget: list, field: { name: regel, widget: string } }
+                      - { name: pruefung, label: Prüfungsinhalt, widget: markdown, required: false }
+                      - { name: musik, label: Musik, widget: string, required: false }
+                      - { name: neue_seite, label: Neue Seite, widget: boolean, required: false }
+                  - name: startbedingungen
+                    label: Startbedingungen
+                    widget: object
+                    fields:
+                      - { name: typ, label: Typ, widget: hidden, default: startbedingungen }
+                      - { name: klasse, label: Klasse, widget: string }
+                      - { name: alter, label: Alter, widget: string }
+                      - { name: voraussetzung, label: Voraussetzung, widget: string }
+                      - { name: programm, label: Programm, widget: markdown, required: false }
+                  - name: bogenklasse
+                    label: Bogenklasse
+                    widget: object
+                    fields:
+                      - { name: typ, label: Typ, widget: hidden, default: bogenklasse }
+                      - { name: name, label: Name, widget: string }
+                      - { name: boegen, label: Bögen, widget: list, field: { name: bogen, widget: string } }
+                      - { name: neue_seite, label: Neue Seite, widget: boolean, required: false }
+                  - name: kontakte
+                    label: Kontakte
+                    widget: object
+                    fields:
+                      - { name: typ, label: Typ, widget: hidden, default: kontakte }
+                      - name: eintraege
+                        label: Einträge
+                        widget: list
+                        fields:
+                          - { name: rolle, label: Rolle, widget: string }
+                          - { name: name, label: Name, widget: string }
+                          - { name: adresse, label: Adresse, widget: string, required: false }
+                          - { name: telefon, label: Telefon, widget: string, required: false }
+                          - { name: email, label: E-Mail, widget: string, required: false }

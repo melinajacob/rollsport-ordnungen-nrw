@@ -1,0 +1,212 @@
+@page {
+  size: A4;
+  margin: 0;
+}
+
+body.page-print {
+  width: 793.7px;
+  background: #fff;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.a4-page {
+  position: relative;
+  width: 793.7px;
+  height: 1122.5px;
+  page-break-after: always;
+  overflow: hidden;
+}
+
+.cover-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, #1a3a5c 0%, #2d5f8a 100%);
+  color: #fff;
+}
+
+.cover-content {
+  text-align: center;
+  padding: 2em;
+}
+
+.cover-content h1 {
+  font-size: 36px;
+  margin-bottom: 0.3em;
+}
+
+.cover-subtitle {
+  font-size: 18px;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+.cover-stand {
+  margin-top: 1.5em;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.toc-page {
+  padding: 80px 70px 60px;
+}
+
+.toc-page h2 {
+  color: #1a3a5c;
+  margin-bottom: 0.6em;
+}
+
+.toc-page ol {
+  list-style: none;
+  padding: 0;
+  counter-reset: toci;
+}
+
+.toc-page li {
+  counter-increment: toci;
+  padding: 0.3em 0;
+  border-bottom: 1px dotted #ccc;
+  font-size: 13px;
+}
+
+.toc-page li::before {
+  content: counter(toci) ".";
+  display: inline-block;
+  width: 1.5em;
+  font-weight: 600;
+  color: #1a3a5c;
+}
+
+.toc-page li a {
+  color: #1e1e1e;
+  text-decoration: none;
+}
+
+.content-page {
+  padding: 80px 50px 60px 70px;
+}
+
+.page-content {
+  max-height: calc(1122.5px - 80px - 60px);
+  overflow: hidden;
+}
+
+.page-header {
+  position: absolute;
+  top: 20px;
+  left: 70px;
+  right: 50px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #1a3a5c;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-bottom: 1px solid #d0d5dd;
+  padding-bottom: 6px;
+}
+
+.page-footer {
+  position: absolute;
+  bottom: 20px;
+  left: 70px;
+  right: 50px;
+  text-align: center;
+  font-size: 10px;
+  color: #888;
+}
+
+.register-strip {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+}
+
+.register-tab {
+  position: absolute;
+  right: 0;
+  width: 24px;
+  font-size: 0;
+  background: #e8ecf0;
+  border-left: 2px solid #d0d5dd;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.register-tab.active {
+  background: #1a3a5c;
+  border-left-color: #1a3a5c;
+}
+
+.tab-label {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 7px;
+  font-weight: 600;
+  color: #555;
+  white-space: nowrap;
+  transform: rotate(180deg);
+  max-height: calc(100% - 4px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.register-tab.active .tab-label {
+  color: #fff;
+}
+
+/* Print block styles */
+.content-page h2 {
+  color: #1a3a5c;
+  font-size: 16px;
+  border-bottom: 2px solid #1a3a5c;
+  padding-bottom: 3px;
+  margin-bottom: 8px;
+}
+
+.content-page .block {
+  margin-bottom: 10px;
+}
+
+.content-page .block-hinweis {
+  padding: 6px 8px;
+  font-size: 10px;
+}
+
+.content-page .block-pruefung {
+  padding: 6px 8px;
+}
+
+.content-page .block-pruefung h3 {
+  font-size: 12px;
+}
+
+.content-page table {
+  font-size: 10px;
+}
+
+.content-page th, .content-page td {
+  padding: 2px 5px;
+}
+
+.content-page .block-startbedingungen h3 {
+  font-size: 13px;
+  color: #1a3a5c;
+}
+
+.content-page .block-vorgabe {
+  border-left-width: 3px;
+}
+
+.content-page .block-abschnitt.kasten-grau {
+  padding: 6px 8px;
+}
+
+.content-page .block-abschnitt.kasten-rosa {
+  padding: 6px 8px;
+  border-left-width: 3px;
+}

@@ -1,0 +1,667 @@
+titel: Meisterschaftsordnung
+untertitel: mit Wertungsrichtlinien für Wertungsrichter:innen
+saison: "2026"
+stand: "02.03.2026"
+stand_wr: "16.04.24"
+stand_formation: "03.06.24"
+kapitel:
+  - titel: Regelungen Meisterschaften
+    id: regelungen
+    kopfzeile: Regelungen Meisterschaften
+    bloecke:
+      - typ: abschnitt
+        titel: "Neuerungen von Saison 2025 zu 2026"
+        inhalt: |
+          - Trennung der Wettbewerbe Fortgeschrittene 1 (Pflicht und Kür getrennt)
+          - Sonderwettbewerb Anfänger 0 (neue Kategorie A0, max. 5 Läufer/Verein)
+          - Änderungen Anforderungen Einzellauf Kür Meisterklasse (Biellmann, Bryant, Biellmann Hacke)
+          - Änderung der Wertigkeiten
+          - Änderung des Wertungssystems (A-Note gedrittelt: Sprünge 1/3, Pirouetten 1/3, Skating Skills 1/3)
+
+      - typ: abschnitt
+        titel: "Sonderregelungen NRW"
+        inhalt: |
+          **Anzahl Starter pro Verein:**
+          - A0: max. 5 Läufer:innen
+          - A1: max. 8 Läufer:innen
+          - Zweier-/Paar-/Gruppenlauf: max. 6 pro Verein
+
+          **Sonderqualifikation:** Einzellauf A1 bis Nachwuchsklasse
+
+          **Gruppenläufe:** Geschlechtsunspezifisch erlaubt
+
+          **Unsportliches Verhalten:** B-Note-Abzug -0,3 bis -1,0
+
+  - titel: Startbedingungen und Kürlaufzeiten
+    id: startbedingungen
+    kopfzeile: Startbedingungen
+    neue_seite: true
+    bloecke:
+      - typ: abschnitt
+        titel: "Einzellauf – Landesebene"
+        inhalt: |
+          | Klasse | Prüfung | Kürlaufzeit | Gesang |
+          |--------|---------|-------------|--------|
+          | Anfänger 0 | keine | 01:30 – 02:00 | Nein |
+          | Anfänger 1 | A1 | 01:30 – 02:00 | Nein |
+          | Anfänger 2 | A2 | 01:30 – 02:00 | Nein |
+          | Fortgeschrittene 1 | A3 | 02:00 – 02:30 | Nein |
+          | Fortgeschrittene 2 | A3 | 02:00 – 02:30 | Ja |
+          | Nachwuchsklasse | Kür 3 | 03:00 ± 10 Sek. | Ja |
+          | Juniorenklasse | Kür 3 | 03:30 ± 10 Sek. | Ja |
+          | Meisterklasse | Kür 3 | 03:30 ± 10 Sek. | Ja |
+          | Meisterklasse Elite | Kür 3 | 04:00 ± 10 Sek. | Ja |
+
+      - typ: abschnitt
+        titel: "Zweier-/Paar-/Gruppenlauf – Landesebene"
+        inhalt: |
+          | Klasse | Prüfung | Kürlaufzeit | Gesang |
+          |--------|---------|-------------|--------|
+          | Anfänger 1 | keine | 02:00 | Nein |
+          | Anfänger 2 | keine | 02:00 | Nein |
+          | Fortgeschrittene | keine | 02:00 – 02:30 | Nein |
+          | Nachwuchsklasse | Kür 4 | 03:30 ± 10 Sek. | Ja |
+          | Juniorenklasse | Kür 4 | 03:30 ± 10 Sek. | Ja |
+          | Meisterklasse | Kür 3 | 04:00 ± 10 Sek. | Ja |
+
+      - typ: abschnitt
+        titel: "Voraussetzungen"
+        inhalt: |
+          - **Lizenzen:** Alle Starter:innen benötigen eine gültige Lizenz
+          - **Prüfungen:** Müssen vor dem Wettbewerb abgelegt sein
+
+      - typ: abschnitt
+        titel: "Musiken"
+        inhalt: |
+          - Musik mit Gesang ist ab Fortgeschrittene 2 erlaubt
+          - Die Musiklänge muss der Kürlaufzeit der jeweiligen Klasse entsprechen
+
+      - typ: hinweis
+        inhalt: |
+          **Einlaufzeiten:** Kür = Kürlaufzeit + 1 Minute. Pflicht = 10 Min. + 5 Min.
+
+      - typ: abschnitt
+        titel: "Kleiderordnung"
+        inhalt: |
+          - Strasssteine: max. 4 mm Durchmesser
+          - Haar-/Kopfschmuck erlaubt
+          - Dezentes Make-up erlaubt
+          - Requisiten sind nicht erlaubt
+
+  - titel: Kürvorgaben
+    id: kuervorgaben
+    kopfzeile: Kürvorgaben
+    neue_seite: true
+    bloecke:
+      - typ: vorgabe
+        name: "Anfänger 0"
+        regeln:
+          - "Dreiersprung, Toeloop, Salchow"
+          - "Zweibeinpirouette (3 Umdrehungen)"
+          - "Standpirouette (2 Umdrehungen)"
+        pruefung: |
+          **Pflicht:** 2 Sprünge + 1 Pirouette
+
+          | | |
+          |---|---|
+          | Prüfung | Keine |
+          | Musiklänge | 01:30 – 02:00 |
+          | Gesang | Nein |
+          | Abzüge | 0,5 pro nicht-erlaubtem Element |
+
+      - typ: vorgabe
+        name: "Anfänger 1"
+        regeln:
+          - "Dreiersprung, Toeloop, Salchow, Flip"
+          - "Choreo-Step Sequenz"
+          - "Zweibeinpirouette (3 Umdrehungen)"
+          - "Standpirouette (2 Umdrehungen)"
+        pruefung: |
+          | | |
+          |---|---|
+          | Prüfung | A1 |
+          | Musiklänge | 01:30 – 02:00 |
+          | Gesang | Nein |
+          | Abzüge | 0,5 pro nicht-erlaubtem Element |
+
+      - typ: vorgabe
+        name: "Anfänger 2"
+        regeln:
+          - "Alle einfachen Sprünge ohne Axel"
+          - "Standpirouetten (3 Umdrehungen)"
+          - "Sitzpirouetten (2 Umdrehungen)"
+          - "Choreo-Step + 4 Schrittelemente"
+        pruefung: |
+          **Untersagt:** Axel, Waagepirouetten
+
+          | | |
+          |---|---|
+          | Prüfung | A2 |
+          | Musiklänge | 01:30 – 02:00 |
+          | Gesang | Nein |
+          | Abzüge | 0,5 pro nicht-erlaubtem Element |
+
+      - typ: vorgabe
+        name: "Fortgeschrittene 1"
+        regeln:
+          - "Axel (3/4)"
+          - "Stand-/Sitzpirouetten (3 Umdrehungen)"
+          - "Waagepirouetten va/ra (2 Umdrehungen, Kombination)"
+          - "Schrittfolge nach 3-Quadrantenregel"
+        pruefung: |
+          | | |
+          |---|---|
+          | Prüfung | A3 |
+          | Musiklänge | 02:00 – 02:30 |
+          | Gesang | Nein |
+          | Abzüge | 0,5 pro nicht-erlaubtem Element |
+
+      - typ: vorgabe
+        name: "Fortgeschrittene 2"
+        regeln:
+          - "1 Doppelsprung erlaubt"
+          - "Waagepirouetten va/ra"
+          - "Schrittfolge"
+        pruefung: |
+          | | |
+          |---|---|
+          | Prüfung | A3 |
+          | Musiklänge | 02:00 – 02:30 |
+          | Gesang | Ja |
+          | Abzüge | 0,5 pro nicht-erlaubtem Element |
+
+      - typ: vorgabe
+        name: "Nachwuchsklasse"
+        neue_seite: true
+        regeln:
+          - "Alle einfachen und Doppelsprünge + Axel"
+          - "Alle Pirouetten (3 Umdrehungen) + Kombinationen"
+          - "Schrittfolge"
+          - "Beschränkung: 1 Sprung auf vorwärts"
+          - "Toeloop-Beschränkung"
+        pruefung: |
+          | | |
+          |---|---|
+          | Prüfung | Kür 3 |
+          | Musiklänge | 03:00 ± 10 Sek. |
+          | Gesang | Ja |
+          | Abzüge | 0,5 pro Regelverstoß |
+
+      - typ: vorgabe
+        name: "Juniorenklasse"
+        regeln:
+          - "Alle einfachen und Doppelsprünge + Axel"
+          - "Alle Pirouetten + Kombinationen"
+          - "Toeloop-Beschränkung"
+        pruefung: |
+          | | |
+          |---|---|
+          | Prüfung | Kür 3 |
+          | Musiklänge | 03:30 ± 10 Sek. |
+          | Gesang | Ja |
+          | Abzüge | 0,5 pro Regelverstoß |
+
+      - typ: vorgabe
+        name: "Meisterklasse"
+        regeln:
+          - "Alle einfachen Sprünge + Axel"
+          - "Doppel-Toeloop, Doppel-Salchow + 1 weiterer Doppelsprung"
+          - "Pirouetten Kategorie B"
+          - "Zusätzlich eine aus: Hacke va/ra, Inverted, Broken Ankle, Biellmann, Bryant, Biellmann Hacke"
+        pruefung: |
+          | | |
+          |---|---|
+          | Prüfung | Kür 3 |
+          | Musiklänge | 03:30 ± 10 Sek. |
+          | Gesang | Ja |
+          | Abzüge | 0,5 pro Regelverstoß |
+
+      - typ: vorgabe
+        name: "Meisterklasse Elite"
+        regeln:
+          - "Alles erlaubt"
+        pruefung: |
+          | | |
+          |---|---|
+          | Prüfung | Kür 3 |
+          | Musiklänge | 04:00 ± 10 Sek. |
+          | Gesang | Ja |
+
+      - typ: abschnitt
+        titel: "Zweier-/Paar-/Gruppenlauf"
+        neue_seite: true
+        inhalt: |
+          **A1:** Analog Einzellauf A1. Keine Prüfung. 02:00. Kein Gesang.
+
+          **A2:** Analog Einzellauf A2. Keine Prüfung. 02:00. Kein Gesang.
+
+          **Fortgeschrittene:** Analog Fortgeschrittene 1. Keine Prüfung. 02:00 – 02:30. Kein Gesang.
+
+          **Nachwuchsklasse:** Wie Einzellauf NWK. Max. 4 Einzelsprünge, 2 Sprungkombinationen. Prüfung Kür 4. 03:30 ± 10 Sek. Gesang ja.
+
+          **Juniorenklasse:** Max. 4 Einzelsprünge, 2 Doppelsprünge, 2 Sprungkombinationen. Prüfung Kür 4. 03:30 ± 10 Sek. Gesang ja.
+
+          **Meisterklasse:** Wie Einzellauf MK. Prüfung Kür 3. 04:00 ± 10 Sek. Gesang ja.
+
+  - titel: Pflichtbögen
+    id: pflichtboegen-wko
+    kopfzeile: Pflichtbögen
+    neue_seite: true
+    bloecke:
+      - typ: bogenklasse
+        name: "Anfänger A0"
+        boegen:
+          - "1 Pflichtfigur (Bogenachter)"
+          - "Max. Punktzahl: 4,2 (0,7 / Kreis)"
+
+      - typ: bogenklasse
+        name: "Anfänger A1"
+        boegen:
+          - "2 Pflichtfiguren"
+          - "Max. Punktzahl: 4,2 (0,7 / Kreis)"
+
+      - typ: bogenklasse
+        name: "Anfänger A2"
+        boegen:
+          - "2 Pflichtfiguren"
+          - "Max. Punktzahl: 4,8 (0,8 / Kreis)"
+
+      - typ: bogenklasse
+        name: "Fortgeschrittene 1"
+        boegen:
+          - "3 Pflichtfiguren"
+          - "Max. Punktzahl: 5,4 (0,9 / Kreis)"
+
+      - typ: bogenklasse
+        name: "Fortgeschrittene 2"
+        boegen:
+          - "3 Pflichtfiguren"
+          - "Max. Punktzahl: 6,0 (1,0 / Kreis)"
+
+      - typ: bogenklasse
+        name: "Nachwuchsklasse (G1/G2/Hallenpflicht)"
+        neue_seite: true
+        boegen:
+          - "4 Pflichtfiguren je Gruppe"
+          - "Max. Punktzahl: 7,2 (1,2 / Kreis)"
+
+      - typ: bogenklasse
+        name: "Juniorenklasse (J1–J4/Hallenpflicht)"
+        boegen:
+          - "3–4 Pflichtfiguren"
+          - "Max. Punktzahl: 8,4 (1,4 / Kreis)"
+
+      - typ: bogenklasse
+        name: "Meisterklasse (M1–M4)"
+        boegen:
+          - "4 Pflichtfiguren"
+          - "Max. Punktzahl: 9,0 (1,5 / Kreis)"
+
+      - typ: bogenklasse
+        name: "Meisterklasse Elite (ME1–ME4)"
+        boegen:
+          - "3 Pflichtfiguren"
+          - "Max. Punktzahl: 10,0 (2,5 / Kreis + 1,6 / Schlinge)"
+
+      - typ: hinweis
+        inhalt: |
+          Details zu den einzelnen Pflichtfiguren je Klasse und Gruppe sind in der vollständigen
+          Meisterschaftsordnung nachzulesen. Die Spielbeindrehung vor/nach Pflichtdrehungen ist
+          als Referenztabelle verfügbar.
+
+  - titel: Wertungsschema Kür
+    id: wertungsschema
+    kopfzeile: Wertungsschema Kür
+    neue_seite: true
+    bloecke:
+      - typ: abschnitt
+        titel: "A-Note (Gedrittelt)"
+        inhalt: |
+          Die A-Note setzt sich aus drei gleichgewichteten Teilen zusammen:
+
+          | Teil | Anteil |
+          |------|--------|
+          | Sprünge | 1/3 |
+          | Pirouetten | 1/3 |
+          | Skating Skills | 1/3 |
+
+      - typ: abschnitt
+        titel: "B-Note"
+        inhalt: |
+          **Spielraum:** -1,5 bis +1,5
+
+          Bewertung der künstlerischen Gestaltung, Ausdruck, Musikinterpretation und Choreografie.
+
+      - typ: abschnitt
+        titel: "Regelverstöße"
+        inhalt: |
+          | Anzahl Verstöße | Abzug A-Note |
+          |-----------------|-------------|
+          | 1 | -0,5 |
+          | 2 | -0,7 |
+          | 3 | -1,0 |
+
+      - typ: abschnitt
+        titel: "Sprungwertigkeiten (Auswahl)"
+        neue_seite: true
+        inhalt: |
+          | Sprung | Wertigkeit |
+          |--------|-----------|
+          | Alle Figuren | 1,2 |
+          | Dreiersprung | 1,2 |
+          | Toeloop | 1,5 |
+          | Salchow | 1,5 |
+          | Flip | 1,8 |
+          | Lutz | 2,0 |
+          | Rittberger | 2,0 |
+          | Axel | 3,0 |
+          | Doppel-Toeloop | 4,5 |
+          | Doppel-Salchow | 4,5 |
+          | Doppel-Flip | 5,5 |
+          | Doppel-Lutz | 6,0 |
+          | Doppel-Rittberger | 6,0 |
+          | Doppel-Axel | 8,7 |
+
+          **Sprünge mit 1 1/2 Runden:** +0,1
+          **Sprünge mit 1 3/4 Runden:** +0,2
+
+      - typ: abschnitt
+        titel: "Pirouettenwertigkeiten (Auswahl)"
+        inhalt: |
+          | Pirouette | Wertigkeit | Klasse |
+          |-----------|-----------|--------|
+          | Zweibeinpirouette | 1,5 | — |
+          | Tscherkessen/Sit behind | 3,8 | B |
+          | Sitzpirouette re/ra | 3,8 | B |
+          | Sitzpirouette sideways/Twist | 4,8 | B |
+          | Standpirouette forward | 5,0 | B |
+          | Layback | 5,0 | B |
+          | Layover | 5,7 | B |
+          | Torso sideways | 6,0 | B |
+          | Camel forward (Spielbein gehalten) | 6,5 | B |
+          | Split | 6,5 | B |
+          | Hacke va | 6,5 | A |
+          | Camel sideways "Donut" | 6,7 | B |
+          | Hacke ra | 6,7 | A |
+          | Biellmann | 7,6–7,7 | B |
+          | Inverted | 8,2 | A |
+          | Bryant | 8,3 | A |
+
+      - typ: abschnitt
+        titel: "Skating Skills nach Klasse"
+        neue_seite: true
+        inhalt: |
+          | Klasse | Skating Skills |
+          |--------|---------------|
+          | A0 & A1 | 0 – 2,7 |
+          | A2 | 0 – 3,5 |
+          | F1 & F2 | 0 – 3,8 |
+          | NWK | 0 – 4,5 |
+          | Junioren | 0 – 5,3 |
+          | Junioren Elite | 0 – 5,5 |
+          | Meisterklasse | 0 – 6,5 |
+          | Meisterklasse Elite | 0 – 7,5 |
+
+  - titel: Übersicht Pirouetten
+    id: pirouetten
+    kopfzeile: Übersicht Pirouetten
+    neue_seite: true
+    bloecke:
+      - typ: abschnitt
+        titel: "Klasse B – Pirouetten"
+        inhalt: |
+          | Pirouette | Wertigkeit |
+          |-----------|-----------|
+          | Tscherkessen / Sit behind | 3,8 |
+          | Sitzpirouette re/ra | 3,8 |
+          | Sitzpirouette sideways / Twist | 4,8 |
+          | Standpirouette forward | 5,0 |
+          | Layback | 5,0 |
+          | Layover | 5,7 |
+          | Torso sideways | 6,0 |
+          | Camel forward (Spielbein gehalten) | 6,5 |
+          | Split | 6,5 |
+          | Camel sideways "Donut" | 6,7 |
+          | Biellmann | 7,6–7,7 |
+
+      - typ: abschnitt
+        titel: "Klasse A – Pirouetten"
+        inhalt: |
+          | Pirouette | Wertigkeit |
+          |-----------|-----------|
+          | Hacke va | 6,5 |
+          | Hacke ra | 6,7 |
+          | Inverted | 8,2 |
+          | Bryant | 8,3 |
+
+      - typ: hinweis
+        inhalt: |
+          Referenzfotos der Pirouettenpositionen sind in der vollständigen
+          Meisterschaftsordnung enthalten.
+
+  - titel: Wettbewerbsanteile
+    id: wettbewerbsanteile
+    kopfzeile: Wettbewerbsanteile
+    neue_seite: true
+    bloecke:
+      - typ: abschnitt
+        titel: "Kürwertung × Faktor"
+        inhalt: |
+          | Pflichtfiguren | Faktor A | Faktor B |
+          |---------------|----------|----------|
+          | 2 Pflichtfiguren | ×1,0 | ×1,0 |
+          | 3 Pflichtfiguren | ×1,5 | ×1,5 |
+          | 4 Pflichtfiguren | ×2,0 | ×2,0 |
+
+      - typ: abschnitt
+        titel: "Vervielfältigungszahl"
+        inhalt: |
+          | Klasse | Vervielfältigungszahl |
+          |--------|----------------------|
+          | Anfänger 1 & 2 | 1,0 |
+          | Alle weiteren | entfällt |
+
+  - titel: Formationsrichtlinien
+    id: formationen
+    kopfzeile: Formationsrichtlinien
+    neue_seite: true
+    bloecke:
+      - typ: startbedingungen
+        klasse: "Schülerformation"
+        alter: "8–15 Jahre"
+        voraussetzung: "Prüfung A2"
+        programm: |
+          - **Anzahl Läufer:** 8–16
+          - **Kürlaufzeit:** 03:30 – 04:00
+          - **Gesang:** Ja
+          - **Sprünge:** Max. 1/2 Umdrehung
+          - **Hebungen:** Nicht erlaubt
+
+      - typ: startbedingungen
+        klasse: "Juniorenformation"
+        alter: "8–18 Jahre"
+        voraussetzung: "Prüfung A3"
+        programm: |
+          - **Anzahl Läufer:** 12–16
+          - **Kürlaufzeit:** 04:00 ± 10 Sek.
+          - **Gesang:** Ja
+          - **Hebungen:** Nicht erlaubt
+
+      - typ: startbedingungen
+        klasse: "Meisterklasse Formation"
+        alter: "Mindestalter 12"
+        voraussetzung: "Prüfung Kür oder Pflicht 4"
+        programm: |
+          - **Anzahl Läufer:** 12–16
+          - **Kürlaufzeit:** 04:30 – 05:00
+          - **Gesang:** Ja
+          - **Choreografischer Stop:** Max. 10 Sek. erlaubt
+
+      - typ: abschnitt
+        titel: "Kleiderordnung Formation"
+        inhalt: |
+          Spezifische Kleiderordnung für Formationen gemäß den Formationsrichtlinien.
+
+      - typ: abschnitt
+        titel: "Bewertung Formation"
+        neue_seite: true
+        inhalt: |
+          **A-Note (Technik):** 1,0 – 10,0
+
+          **B-Note (Harmonie):** A-Note ± 1,5
+
+          **Bewertete Elemente:**
+
+          | Element | Kürzel |
+          |---------|--------|
+          | Kreise | K1–K4 |
+          | Mühlen | M1–M4 |
+          | Blöcke | B1–B4 |
+          | Kreuzungen | KG1–KG4 |
+          | Linien | L1–L4 |
+          | Schritte | S1–S4 |
+          | Handhaltungen | H1–H4 |
+
+      - typ: abschnitt
+        titel: "Abzüge Formation"
+        inhalt: |
+          | Abzugsgrund | Abzug |
+          |------------|-------|
+          | Sturz (leicht) | -0,2 |
+          | Sturz (schwer) | -1,0 |
+          | Programmaufbau | variabel |
+
+      - typ: abschnitt
+        titel: "Programmaufbau"
+        inhalt: |
+          7 Regeln für die Komposition:
+
+          1. Ausgewogene Verteilung der Elemente
+          2. Nutzung der gesamten Lauffläche
+          3. Vielfalt der Formationen
+          4. Übergänge zwischen den Formationen
+          5. Synchronität der Gruppe
+          6. Ausdruck und Musikinterpretation
+          7. Schwierigkeitsgrad angemessen zur Klasse
+
+  - titel: Begriffserläuterungen
+    id: begriffe
+    kopfzeile: Begriffserläuterungen
+    neue_seite: true
+    bloecke:
+      - typ: abschnitt
+        titel: "Schrittfolge"
+        inhalt: |
+          Eine festgelegte Abfolge von Schritten und Drehungen, die in einer bestimmten Form
+          (Kreis, Diagonal, Serpentine oder Längs) ausgeführt wird.
+
+      - typ: abschnitt
+        titel: "Choreo-Step Sequenz"
+        inhalt: |
+          Eine choreografische Schrittfolge, die Elemente wie Drehungen, Body Movements
+          und Schritte verbindet und als Einheit bewertet wird.
+
+      - typ: abschnitt
+        titel: "3-Quadrantenregel"
+        inhalt: |
+          Die Schrittfolge muss mindestens 3 der 4 Quadranten der Lauffläche abdecken.
+
+      - typ: abschnitt
+        titel: "Start- und Stop-Position"
+        inhalt: |
+          Definierte Positionen zu Beginn und am Ende eines Kürlaufs.
+
+      - typ: abschnitt
+        titel: "Figurenserpentine"
+        inhalt: |
+          Eine Schrittfolge in Serpentinenform über die Lauffläche.
+
+      - typ: abschnitt
+        titel: "Merkmale eines Gruppenlaufs"
+        neue_seite: true
+        inhalt: |
+          **Technik:**
+          - Synchrone Ausführung der Elemente
+          - Gleichmäßige Abstände zwischen den Läufern
+
+          **Choreografie:**
+          - Gemeinsame Gestaltung des Programms
+          - Interaktion der Läufer untereinander
+
+          **Wertung:**
+          - A-Note für technische Ausführung
+          - B-Note für künstlerische Gestaltung
+
+      - typ: abschnitt
+        titel: "Pirouetten – Bewertungskriterien"
+        inhalt: |
+          **Anlauf:** Vorbereitung der Pirouette
+
+          **Eingang:** Übergang in die Drehung
+
+          **Zentrierung:** Stabilität des Drehpunkts
+
+          **Kante:** Korrekte Kantenführung
+
+          **Umdrehungen:** Anzahl der vollständigen Drehungen
+
+          **Wechsel:** Übergang zwischen Positionen
+
+          **Position:** Haltung während der Drehung
+
+          **Auslauf:** Kontrolle nach der Pirouette
+
+  - titel: Anfänger Kürpokal
+    id: kuerpokall
+    kopfzeile: Anfänger Kürpokal
+    neue_seite: true
+    bloecke:
+      - typ: abschnitt
+        titel: "Anfänger Kürpokal"
+        inhalt: |
+          Der Anfänger Kürpokal richtet sich an Anfänger 1 und Anfänger 2, aufgeteilt
+          nach Altersgruppen.
+
+          | | |
+          |---|---|
+          | Kürlaufzeit | 01:30 – 02:00 |
+          | Einlaufzeit | 02:30 |
+          | Prüfungen | Keine erforderlich |
+
+      - typ: hinweis
+        inhalt: |
+          Am Anfänger Kürpokal dürfen nur Läufer:innen teilnehmen, die **nicht**
+          an der Landesmeisterschaft oder am A0-Sonderwettbewerb gemeldet sind.
+
+  - titel: Ansprechpartner
+    id: ansprechpartner-wko
+    kopfzeile: Ansprechpartner
+    neue_seite: true
+    bloecke:
+      - typ: kontakte
+        eintraege:
+          - rolle: Landesrollsportleitung NRW
+            name: Janina Apke
+            adresse: "Brunhildenstraße 9, 32547 Bad Oeynhausen"
+            telefon: "0171 8254436"
+            email: janina.apke@gmx.de
+          - rolle: Ansprechpartner Wertungsrichter
+            name: Melina Jacob
+            adresse: "Bärendorferstraße 1a, 44795 Bochum"
+            telefon: "0162 1807636"
+            email: melina-jacob@gmx.de
+          - rolle: Ansprechpartner RKB Bocholt
+            name: Ilka Willing
+            adresse: "Günther-Hochgartz-Ring 53, 46397 Bocholt"
+            telefon: "0171 8275593"
+            email: info@rkb-bocholt.de
+          - rolle: Ansprechpartner RRC Lohe
+            name: Janina Apke
+            adresse: "Brunhildenstraße 9, 32547 Bad Oeynhausen"
+            telefon: "0171 8254436"
+            email: janina.apke@gmx.de
+          - rolle: Ansprechpartner RSC Oer-Erkenschwick
+            name: Nele Bielawny
+            adresse: "Nordstraße 16, 45657 Recklinghausen"
+            telefon: "0176 40713969"
+            email: bielawny.rsc.oe@gmail.com

@@ -1,0 +1,380 @@
+titel: Prüfungsordnung
+untertitel: Prüfungen Nordrhein-Westfalen
+unterzeile: mit Wertungsrichtlinien für Wertungsrichter:innen
+saison: "2026"
+stand: "02.03.2026"
+stand_wr: "02.03.2026"
+kapitel:
+  - titel: Anfängerprüfungen
+    id: anfaengerpruefungen
+    kopfzeile: Anfängerprüfungen
+    bloecke:
+      - typ: pruefung
+        name: "A1 - Freiläufer"
+        elemente:
+          - Rechts & links vorw. übersetzen
+          - Rechts & links rückwärts übersetzen
+          - "Wahl eines Body Movements (low, medium, high)"
+          - Bremsen durch Drehung auf rückwärts und auf die Stopper
+        wertung:
+          mindestpunktzahl: "6,0"
+          durchschnittswert: "1,5"
+          keine_note_unter: "1,0"
+          noten:
+            sehr_gut: "2,5"
+            gut: "2,3"
+            befriedigend: "2,0"
+            ausreichend: "1,5"
+            mangelhaft: "1,0"
+
+      - typ: pruefung
+        name: "A2 - Figurenläufer"
+        elemente:
+          - Bogenachter Rva und Lva
+          - Fuchsdreier Lva und Rva (mit oder ohne Zeichnung)
+          - "Schwungbögen (links und rechts)"
+          - Flieger vorwärts und rückwärts mit Wechsel um die Kurve
+          - Dreiersprung mit Mohwakanlauf
+          - Salchow mit langem Auslauf
+          - "Zweibeinpirouette **oder** Einbeinpirouette 4 oder 3 Umdrehungen"
+          - "Zirkel ra **oder** Mond"
+        wertung:
+          mindestpunktzahl: "20,0"
+          durchschnittswert: "2,5"
+          keine_note_unter: "1,5"
+          noten:
+            sehr_gut: "4,0"
+            gut: "3,7"
+            befriedigend: "3,2"
+            ausreichend: "2,5"
+            mangelhaft: "1,5"
+      - typ: hinweis
+        inhalt: |
+          Für jedes Kürelement stehen **2 Versuche** zur Verfügung. Der bessere wird gewertet.
+      - typ: hinweis
+        inhalt: |
+          Bei nicht ausreichender Wertung darf **jedes Element** am Ende einer Prüfung
+          wiederholt werden!
+
+      - typ: pruefung
+        name: "A3 - Kunstläufer"
+        elemente:
+          - Dreiersprung mit Mohawkanlauf
+          - Salchow
+          - Rittberger
+          - "Zweibeinpirouette mind. **5 Umdrehungen**"
+          - "Einbeinpirouette mind. **3 Umdrehungen**"
+        wertung:
+          mindestpunktzahl: "20,0"
+          durchschnittswert: "4,0"
+          keine_note_unter: "2,5"
+          noten:
+            sehr_gut: "6,2"
+            gut: "5,7"
+            befriedigend: "5,0"
+            ausreichend: "4,0"
+            mangelhaft: "2,5"
+      - typ: hinweis
+        inhalt: |
+          Für jedes Kürelement stehen **2 Versuche** zur Verfügung. Der bessere wird gewertet.
+      - typ: hinweis
+        inhalt: |
+          Bei nicht ausreichender Wertung darf **jedes Element** am Ende einer Prüfung
+          wiederholt werden!
+
+  - titel: Pflichtprüfungen
+    id: pflichtpruefungen
+    kopfzeile: Pflichtprüfungen
+    neue_seite: true
+    bloecke:
+      - typ: pruefung
+        name: "Pflicht 4"
+        elemente:
+          - Bogenachter Rva
+          - Bogenachter Rve
+          - Bogenachter Rra
+          - Bogenachter Rre
+          - Dreier va / re
+          - Dreier ve / ra
+          - Schlangenbogen Doppeldreier va
+        wertung:
+          mindestpunktzahl: "31,5"
+          durchschnittswert: "4,5"
+          keine_note_unter: "?"
+          noten:
+            sehr_gut: "6,4"
+            gut: "6,0"
+            befriedigend: "5,4"
+            ausreichend: "4,5"
+            mangelhaft: "3,5"
+
+      - typ: pruefung
+        name: "Pflicht 3"
+        elemente:
+          - Doppeldreier Rre
+          - Gegendreier ve
+          - Gegenwende va
+          - Gegenwende ve
+          - Schlangenbogen - Dreier va
+          - Schlinge Rva
+          - Schlinge Rve
+        wertung:
+          mindestpunktzahl: "38,5"
+          durchschnittswert: "5,5"
+          keine_note_unter: "?"
+          noten:
+            sehr_gut: "7,4"
+            gut: "7,0"
+            befriedigend: "6,4"
+            ausreichend: "5,5"
+            mangelhaft: "4,5"
+
+      - typ: pruefung
+        name: "Pflicht 2"
+        elemente:
+          - Gegendreier va
+          - Wende va
+          - Wende ve
+          - Schlangenbogen - Doppeldreier ra
+          - Gegenwende ve
+          - Schlinge Rra
+          - Schlinge Rre
+          - Schlangenbogen-Schlinge va
+        wertung:
+          mindestpunktzahl: "52,0"
+          durchschnittswert: "6,5"
+          keine_note_unter: "?"
+          noten:
+            sehr_gut: "?"
+            gut: "?"
+            befriedigend: "?"
+            ausreichend: "?"
+            mangelhaft: "?"
+
+      - typ: pruefung
+        name: "Pflicht 1"
+        elemente:
+          - Doppeldreier Paragraph va
+          - Doppeldreier Paragraph ra
+          - Gegendreier Paragraph va
+          - Gegendreier Paragraph ra
+          - Schlangenbogen - Schlinge ra
+          - Schlingen Paragraph va
+          - Schlingen Paragraph ra
+        wertung:
+          mindestpunktzahl: "52,5"
+          durchschnittswert: "7,5"
+          keine_note_unter: "?"
+          noten:
+            sehr_gut: "?"
+            gut: "?"
+            befriedigend: "?"
+            ausreichend: "?"
+            mangelhaft: "?"
+
+  - titel: Pflichtbögen
+    id: pflichtboegen
+    kopfzeile: Pflichtbögen
+    neue_seite: true
+    bloecke:
+      - typ: boegen
+        name: Pflichtbögen-Übersicht
+        bilder:
+          - datei: boegen/bogenachter.svg
+            titel: Bogenachter
+          - datei: boegen/dreier.svg
+            titel: Dreier
+          - datei: boegen/doppeldreier.svg
+            titel: Doppeldreier
+          - datei: boegen/gegendreier.svg
+            titel: Gegendreier
+          - datei: boegen/schlangenbogen.svg
+            titel: Schlangenbogen
+          - datei: boegen/schlangenbogen-dreier.svg
+            titel: Schlangenbogen-Dreier
+          - datei: boegen/schlangenbogen-doppeldreier.svg
+            titel: Schlangenbogen-Doppeldreier
+          - datei: boegen/schlangenbogen-gegendreier.svg
+            titel: Schlangenbogen-Gegendreier
+          - datei: boegen/wende.svg
+            titel: Wende
+          - datei: boegen/gegenwende.svg
+            titel: Gegenwende
+          - datei: boegen/doppeldreier-wende.svg
+            titel: Doppeldreier-Wende
+          - datei: boegen/gegendreier-gegenwende.svg
+            titel: Gegendreier - Gegenwende
+      - typ: boegen
+        name: Pflichtbögen-Übersicht (Fortsetzung)
+        neue_seite: true
+        bilder:
+          - datei: boegen/schlinge.svg
+            titel: Schlinge
+          - datei: boegen/schlangenbogen-schlinge.svg
+            titel: Schlangenbogen-Schlinge
+          - datei: boegen/schlingen-paragraph.svg
+            titel: Schlingen-Paragraph
+          - datei: boegen/paragraph.svg
+            titel: Paragraph
+          - datei: boegen/dreier-paragraph.svg
+            titel: Dreier-Paragraph
+          - datei: boegen/doppeldreier-paragraph.svg
+            titel: Doppeldreier-Paragraph
+          - datei: boegen/gegendreier-paragraph.svg
+            titel: Gegendreier-Paragraph
+          - datei: boegen/doppeldreier-wende-paragraph.svg
+            titel: Doppeldreier-Wende-Paragraph
+          - datei: boegen/gegenwende-wende-paragraph.svg
+            titel: Gegenwende-Wende-Paragraph
+          - datei: boegen/doppeldreier-gegenwende-paragraph.svg
+            titel: Doppeldreier-Gegenwende-Paragraph
+          - datei: boegen/gegendreier-gegenwende-paragraph.svg
+            titel: Gegendreier-Gegenwende-Paragraph
+
+  - titel: Kürprüfungen
+    id: kuerpruefungen
+    kopfzeile: Kürprüfungen
+    neue_seite: true
+    bloecke:
+      - typ: pruefung
+        name: "Kür 4"
+        elemente:
+          - Toeloop
+          - Salchow
+          - Flip
+          - Rittberger aus beliebiger Vorbereitung
+          - Dreierschritte in Achterform
+          - "Standpirouette re **5 Umdrehungen**"
+          - "Sitzpirouette (in Sitzposition) re **3 Umdrehungen**"
+          - "Wahlweise Standpirouette va **oder** ra **5/3 Umdrehungen**"
+        wertung:
+          mindestpunktzahl: "36,0"
+          durchschnittswert: "4,5"
+          keine_note_unter: "?"
+          noten:
+            sehr_gut: "6,4"
+            gut: "6,0"
+            befriedigend: "5,4"
+            ausreichend: "4,5"
+            mangelhaft: "3,5"
+
+      - typ: pruefung
+        name: "Kür 3 - Nachwuchsklasse"
+        elemente:
+          - "Schrittpassage (wie in der WKO festgelegt)"
+          - Lutz
+          - "Kombination aus **3 Sprüngen mit Thorén**, nicht am Anfang oder Ende der Kombi"
+          - 3 Rittberger in Folge
+          - "Sitzpirouette re **3 Umdrehungen**"
+          - "Standpirouette va oder ra **3 Umdrehungen**"
+          - "Eingeschleuderte Waagenpirouette re **2 Umdrehungen**"
+        wertung:
+          mindestpunktzahl: "38,5"
+          durchschnittswert: "5,5"
+          keine_note_unter: "?"
+          noten:
+            sehr_gut: "7,4"
+            gut: "7,0"
+            befriedigend: "6,4"
+            ausreichend: "5,5"
+            mangelhaft: "4,5"
+      - typ: hinweis
+        inhalt: |
+          Für jedes Kürelement stehen **2 Versuche** zur Verfügung. Der bessere wird gewertet.
+
+      - typ: abschnitt
+        titel: "Kür 3 - Schrittfolge"
+        neue_seite: true
+        inhalt: |
+          Kreis-, Diagonal-, Serpentinen- oder Längsschrittfolge mit mindestens folgenden Elementen:
+
+          - 2 Doppeldreier, einer im Uhrzeigersinn, einer gegen den Uhrzeigersinn
+          - 2 Gegendreier, einer im Uhrzeigersinn, einer gegen den Uhrzeigersinn
+          - 2 verschiedene Elemente aus den Folgenden:
+            - 1 Wende
+            - 1 Gegenwende
+            - 1 Choctaw
+            - 1 Schlinge
+            - 1 Loopstep
+            - Twizzle/Travelling
+
+          verbunden durch weitere Schritte, Drehung und Body Movements
+
+      - typ: pruefung
+        name: "Kürklasse 2 - Juniorenklasse"
+        neue_seite: true
+        elemente:
+          - 5 Rittberger in Folge
+          - "Kombination aus **4 Sprüngen mit Thorén** (nicht am Anfang oder Ende der Kombi)"
+          - Axel
+          - "Doppel-Toeloop **oder** Doppel-Salchow"
+          - "Kreisschrittfolge nach beiden Seiten (ohne Figur)"
+          - "Eingeschleuderte Waagenpirouette va **2 Umdrehungen**"
+          - "Eingeschleuderte Waagenpirouette ra **3 Umdrehungen**"
+        wertung:
+          mindestpunktzahl: "45,5"
+          durchschnittswert: "6,5"
+          keine_note_unter: "?"
+          noten:
+            sehr_gut: "4,0"
+            gut: "3,7"
+            befriedigend: "3,2"
+            ausreichend: "2,5"
+            mangelhaft: "1,5"
+
+      - typ: pruefung
+        name: "Kür 1"
+        elemente:
+          - "Schrittverbindung in Serpentinen Form **(mind. 1 1/2 S)** mit schwierigen Elementen (mit Doppeldreier, Gegendreier, Wenden, Gegenwenden, Mohawk, Choctaws, …)"
+          - Doppel Toeloop
+          - Doppel Salchow
+          - "Sprungkombination aus **3 bis 5 Sprüngen, mind. 1 Doppelsprung**"
+          - "Eingeschleuderte Waagenpirouette va **3 Umdrehungen**"
+          - "Wechsel - Waage **3/3 Umdrehungen**"
+          - "Waage / Sitzpirouette (Kante beliebig) **3/3 Umdrehungen**"
+        wertung:
+          mindestpunktzahl: "52,5"
+          durchschnittswert: "7,5"
+          keine_note_unter: "?"
+          noten:
+            sehr_gut: "4,0"
+            gut: "3,7"
+            befriedigend: "3,2"
+            ausreichend: "2,5"
+            mangelhaft: "1,5"
+      - typ: hinweis
+        inhalt: |
+          Für jedes Kürelement stehen **2 Versuche** zur Verfügung. Der bessere wird gewertet.
+
+  - titel: Ansprechpartner
+    id: ansprechpartner
+    kopfzeile: Ansprechpartner
+    neue_seite: true
+    bloecke:
+      - typ: kontakte
+        eintraege:
+          - rolle: Landesrollsportleitung NRW
+            name: Janina Apke
+            adresse: "Brunhildenstraße 9, 32547 Bad Oeynhausen"
+            telefon: "0171 8254436"
+            email: janina.apke@gmx.de
+          - rolle: Ansprechpartner Wertungsrichter
+            name: Melina Jacob
+            adresse: "Bärendorferstraße 1a, 44795 Bochum"
+            telefon: "0162 1807636"
+            email: melina-jacob@gmx.de
+          - rolle: Ansprechpartner RKB Bocholt
+            name: Ilka Willing
+            adresse: "Günther-Hochgartz-Ring 53, 46397 Bocholt"
+            telefon: "0171 8275593"
+            email: info@rkb-bocholt.de
+          - rolle: Ansprechpartner RRC Lohe
+            name: Janina Apke
+            adresse: "Brunhildenstraße 9, 32547 Bad Oeynhausen"
+            telefon: "0171 8254436"
+            email: janina.apke@gmx.de
+          - rolle: Ansprechpartner RSC Oer-Erkenschwick
+            name: Nele Bielawny
+            adresse: "Nordstraße 16, 45657 Recklinghausen"
+            telefon: "0176 40713969"
+            email: bielawny.rsc.oe@gmail.com
