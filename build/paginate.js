@@ -1,8 +1,8 @@
 (() => {
   const PAGE_H = 1122.5;
-  const MARGIN_TOP = 80;
-  const MARGIN_BOTTOM = 60;
-  const TAB_HEIGHT_RATIO = 0.8;
+  const MARGIN_TOP = 55;
+  const MARGIN_BOTTOM = 50;
+  const TAB_HEIGHT_RATIO = 0.85;
   const CONTENT_H = PAGE_H - MARGIN_TOP - MARGIN_BOTTOM;
 
   const tabsData = JSON.parse(
@@ -15,11 +15,13 @@
   let currentKopfzeile = '';
   let currentTabIndex = -1;
 
-  function createPage() {
+  function createPage(type) {
     const p = {
+      type: type || 'content',
       content: document.createElement('div'),
       kopfzeile: currentKopfzeile,
       tabIndex: currentTabIndex,
+      dividerTitle: '',
     };
     p.content.className = 'page-content';
     pages.push(p);
@@ -44,7 +46,15 @@
     const tabIdx = tabsData.findIndex(t => t.id === section.id);
     if (tabIdx >= 0) currentTabIndex = tabIdx;
 
-    if (section.dataset.neueSeite !== undefined && currentPage.content.children.length > 0) {
+    if (section.dataset.neueSeite !== undefined) {
+      // Insert a section divider page
+      const dividerTitle = section.dataset.dividerTitle || kopfzeile || '';
+      if (dividerTitle) {
+        const divider = createPage('divider');
+        divider.dividerTitle = dividerTitle;
+        divider.kopfzeile = currentKopfzeile;
+        divider.tabIndex = currentTabIndex;
+      }
       currentPage = createPage();
     }
 
@@ -85,70 +95,89 @@
   const wrapper = document.createElement('div');
   wrapper.className = 'print-pages';
 
-  const toc = document.querySelector('.print-toc');
+  // Cover page
   const cover = document.querySelector('.print-cover');
-
   if (cover) {
     const coverPage = document.createElement('div');
     coverPage.className = 'a4-page cover-page';
     coverPage.appendChild(cover);
+    addRegisterTabs(coverPage, -1);
     wrapper.appendChild(coverPage);
   }
 
-  if (toc) {
-    const tocPage = document.createElement('div');
-    tocPage.className = 'a4-page toc-page';
-    tocPage.appendChild(toc);
-    wrapper.appendChild(tocPage);
-  }
+  // Content pages (including dividers)
+  const contentPages = pages.filter(p => p.type === 'content');
+  const totalContentPages = contentPages.length;
+  let contentPageNum = 0;
 
-  const totalContentPages = pages.length;
-  pages.forEach((p, i) => {
+  pages.forEach((p) => {
     const page = document.createElement('div');
+
+    if (p.type === 'divider') {
+      page.className = 'a4-page divider-page';
+      const title = document.createElement('div');
+      title.className = 'divider-title';
+      title.textContent = p.dividerTitle;
+      page.appendChild(title);
+      addRegisterTabs(page, p.tabIndex);
+      wrapper.appendChild(page);
+      return;
+    }
+
+    contentPageNum++;
     page.className = 'a4-page content-page';
 
-    if (p.kopfzeile) {
-      const header = document.createElement('div');
-      header.className = 'page-header';
-      header.textContent = p.kopfzeile;
-      page.appendChild(header);
-    }
+    // Header with chapter name + page number
+    const header = document.createElement('div');
+    header.className = 'page-header';
+    const headerTitle = document.createElement('span');
+    headerTitle.className = 'page-header-title';
+    headerTitle.textContent = p.kopfzeile || '';
+    const headerPageNum = document.createElement('span');
+    headerPageNum.className = 'page-header-pagenum';
+    headerPageNum.textContent = contentPageNum + ' / ' + totalContentPages;
+    header.appendChild(headerTitle);
+    header.appendChild(headerPageNum);
+    page.appendChild(header);
 
     page.appendChild(p.content);
 
-    const footer = document.createElement('div');
-    footer.className = 'page-footer';
-    footer.textContent = (i + 1) + ' / ' + totalContentPages;
-    page.appendChild(footer);
-
-    if (tabsData.length > 0) {
-      const tabStrip = document.createElement('div');
-      tabStrip.className = 'register-strip';
-      const totalTabs = tabsData.length;
-      const availableHeight = PAGE_H * TAB_HEIGHT_RATIO;
-      const tabH = Math.min(availableHeight / totalTabs, 80);
-      const startY = (PAGE_H - totalTabs * tabH) / 2;
-
-      tabsData.forEach((tab, ti) => {
-        const el = document.createElement('a');
-        el.className = 'register-tab' + (ti === p.tabIndex ? ' active' : '');
-        el.href = '#' + tab.id;
-        el.style.top = startY + ti * tabH + 'px';
-        el.style.height = tabH + 'px';
-        el.style.lineHeight = tabH + 'px';
-
-        const span = document.createElement('span');
-        span.className = 'tab-label';
-        span.textContent = tab.titel;
-        el.appendChild(span);
-        tabStrip.appendChild(el);
-      });
-
-      page.appendChild(tabStrip);
-    }
-
+    addRegisterTabs(page, p.tabIndex);
     wrapper.appendChild(page);
   });
+
+  function addRegisterTabs(page, activeIndex) {
+    if (tabsData.length === 0) return;
+
+    const tabStrip = document.createElement('div');
+    tabStrip.className = 'register-strip';
+    const totalTabs = tabsData.length;
+    const availableHeight = PAGE_H * TAB_HEIGHT_RATIO;
+    const tabH = Math.min(availableHeight / totalTabs, 90);
+    const startY = 40 + (PAGE_H - 40 - totalTabs * tabH) / 2;
+
+    // Menu icon at top
+    const menu = document.createElement('div');
+    menu.className = 'register-menu';
+    menu.innerHTML = '&#9776;';
+    tabStrip.appendChild(menu);
+
+    tabsData.forEach((tab, ti) => {
+      const el = document.createElement('div');
+      el.className = 'register-tab' + (ti === activeIndex ? ' active' : '');
+      el.style.top = startY + ti * tabH + 'px';
+      el.style.height = tabH + 'px';
+      el.style.lineHeight = tabH + 'px';
+
+      const num = document.createElement('span');
+      num.className = 'tab-num';
+      num.textContent = (ti + 1);
+      el.appendChild(num);
+      tabStrip.appendChild(el);
+    });
+
+    page.appendChild(tabStrip);
+  }
 
   document.body.appendChild(wrapper);
 })();

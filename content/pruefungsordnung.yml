@@ -33,8 +33,9 @@ kapitel:
           - Bogenachter Rva und Lva
           - Fuchsdreier Lva und Rva (mit oder ohne Zeichnung)
           - "Schwungbögen (links und rechts)"
+        elemente_rechts:
           - Flieger vorwärts und rückwärts mit Wechsel um die Kurve
-          - Dreiersprung mit Mohwakanlauf
+          - Dreiersprung mit Mohawkanlauf
           - Salchow mit langem Auslauf
           - "Zweibeinpirouette **oder** Einbeinpirouette 4 oder 3 Umdrehungen"
           - "Zirkel ra **oder** Mond"
@@ -243,6 +244,7 @@ kapitel:
           - Salchow
           - Flip
           - Rittberger aus beliebiger Vorbereitung
+        elemente_rechts:
           - Dreierschritte in Achterform
           - "Standpirouette re **5 Umdrehungen**"
           - "Sitzpirouette (in Sitzposition) re **3 Umdrehungen**"
@@ -265,6 +267,7 @@ kapitel:
           - Lutz
           - "Kombination aus **3 Sprüngen mit Thorén**, nicht am Anfang oder Ende der Kombi"
           - 3 Rittberger in Folge
+        elemente_rechts:
           - "Sitzpirouette re **3 Umdrehungen**"
           - "Standpirouette va oder ra **3 Umdrehungen**"
           - "Eingeschleuderte Waagenpirouette re **2 Umdrehungen**"
@@ -308,6 +311,7 @@ kapitel:
           - "Kombination aus **4 Sprüngen mit Thorén** (nicht am Anfang oder Ende der Kombi)"
           - Axel
           - "Doppel-Toeloop **oder** Doppel-Salchow"
+        elemente_rechts:
           - "Kreisschrittfolge nach beiden Seiten (ohne Figur)"
           - "Eingeschleuderte Waagenpirouette va **2 Umdrehungen**"
           - "Eingeschleuderte Waagenpirouette ra **3 Umdrehungen**"
@@ -329,6 +333,7 @@ kapitel:
           - Doppel Toeloop
           - Doppel Salchow
           - "Sprungkombination aus **3 bis 5 Sprüngen, mind. 1 Doppelsprung**"
+        elemente_rechts:
           - "Eingeschleuderte Waagenpirouette va **3 Umdrehungen**"
           - "Wechsel - Waage **3/3 Umdrehungen**"
           - "Waage / Sitzpirouette (Kante beliebig) **3/3 Umdrehungen**"

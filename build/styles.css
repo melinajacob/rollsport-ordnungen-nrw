@@ -7,28 +7,26 @@
 }
 
 :root {
-  --color-primary: #1a3a5c;
-  --color-primary-light: #2d5f8a;
+  --color-primary: #1e1e1e;
   --color-accent: #c8102e;
   --color-bg: #ffffff;
-  --color-bg-alt: #f5f6f8;
+  --color-beige: #d5c8bd;
+  --color-beige-light: #f0e6dd;
+  --color-rosa: #fce8ec;
+  --color-rosa-dark: #f5d0d6;
   --color-text: #1e1e1e;
   --color-text-light: #555;
-  --color-border: #d0d5dd;
-  --color-hinweis-bg: #eef4fb;
-  --color-hinweis-border: #2d5f8a;
-  --color-kasten-grau: #f0f1f3;
-  --color-kasten-rosa: #fdf0f2;
-  --color-kasten-rosa-border: #e8a0aa;
+  --color-border: #d5c8bd;
   --color-link: #1a5fa8;
-  --radius: 6px;
+  --color-bg-alt: #f5f1ed;
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --radius: 4px;
   --font: 'Outfit', system-ui, -apple-system, sans-serif;
 }
 
 html {
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 body {
@@ -39,8 +37,8 @@ body {
 }
 
 h1, h2, h3, h4 {
-  line-height: 1.25;
-  font-weight: 600;
+  line-height: 1.2;
+  font-weight: 900;
 }
 
 h1 { font-size: 2rem; }
@@ -69,8 +67,8 @@ th, td {
 }
 
 th {
-  background: var(--color-bg-alt);
-  font-weight: 600;
+  background: var(--color-beige-light);
+  font-weight: 700;
 }
 
 thead:empty,
@@ -78,142 +76,260 @@ thead tr:empty {
   display: none;
 }
 
-th:empty ~ th:empty {
-  display: none;
-}
-
 .block {
-  margin-bottom: 1.2em;
+  margin-bottom: 1em;
 }
 
+/* Hinweis: pink/rose strip */
 .block-hinweis {
-  display: flex;
-  gap: 0.75em;
-  padding: 0.8em 1em;
-  background: var(--color-hinweis-bg);
-  border-left: 4px solid var(--color-hinweis-border);
+  padding: 0.6em 1em;
+  background: var(--color-rosa);
   border-radius: var(--radius);
+  font-size: 0.95rem;
 }
 
-.hinweis-icon {
-  font-size: 1.2em;
-  flex-shrink: 0;
-  line-height: 1.6;
-}
+.block-hinweis p:last-child { margin-bottom: 0; }
 
+/* Pruefung block */
 .block-pruefung {
-  padding: 0.8em 1em;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  background: var(--color-bg);
+  margin-bottom: 1.5em;
 }
 
 .pruefung-name {
-  color: var(--color-primary);
+  font-weight: 900;
+  font-size: 1.3rem;
+  margin-bottom: 0.4em;
 }
 
 .pruefung-elemente {
-  margin: 0.6em 0 0.8em 1.4em;
+  margin: 0.4em 0 0.6em;
 }
 
-.pruefung-elemente li {
-  margin-bottom: 0.2em;
+.pruefung-element {
+  margin-bottom: 0.15em;
+  line-height: 1.4;
 }
 
+.pruefung-elemente-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 2em;
+  margin: 0.4em 0 0.6em;
+}
+
+.pruefung-elemente-col .pruefung-element {
+  margin-bottom: 0.15em;
+}
+
+/* Wertung box: beige background */
 .pruefung-wertung {
+  background: var(--color-beige-light);
+  border-left: 3px solid var(--color-beige);
+  padding: 0.8em 1em;
+  border-radius: var(--radius);
   margin-top: 0.6em;
-  padding: 0.6em 0.8em;
-  background: var(--color-bg-alt);
-  border-radius: var(--radius);
 }
 
-.wertung-table {
-  width: auto;
-  margin: 0 0 0.5em;
+.wertung-title {
+  font-weight: 900;
+  font-style: italic;
+  margin-bottom: 0.5em;
+}
+
+.wertung-row {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+  margin-bottom: 0.4em;
+  font-size: 0.95rem;
+}
+
+.wertung-item span {
+  font-weight: 900;
+}
+
+.wertung-divider {
+  border: none;
+  border-top: 1px solid var(--color-beige);
+  margin: 0.5em 0;
+}
+
+.noten-row {
+  display: flex;
+  gap: 0;
+  justify-content: space-around;
+  text-align: center;
   font-size: 0.9rem;
 }
 
-.wertung-table td:first-child {
-  font-weight: 500;
-  padding-right: 1.5em;
-  border: none;
-  background: transparent;
+.note-col {
+  flex: 1;
+  text-align: center;
 }
 
-.wertung-table td:last-child {
-  border: none;
-  background: transparent;
-}
-
-.noten-table {
+.note-col .note-label {
   font-size: 0.85rem;
-  width: auto;
 }
 
-.noten-table th {
-  font-weight: 500;
-  font-size: 0.8rem;
-  text-align: center;
-  padding: 0.3em 0.6em;
+.note-col .note-value {
+  font-weight: 900;
 }
 
-.noten-table td {
-  text-align: center;
-  padding: 0.3em 0.6em;
-}
-
-.pruefung-bestanden {
-  margin-top: 0.4em;
-  padding: 0.3em 0.6em;
-  background: var(--color-bg-alt);
-  border-radius: var(--radius);
-  font-size: 0.9rem;
+/* Abschnitt blocks */
+.block-abschnitt {
+  margin-bottom: 1em;
 }
 
 .block-abschnitt.kasten-grau {
-  padding: 0.8em 1em;
-  background: var(--color-kasten-grau);
+  padding: 0.6em 1em;
+  background: var(--color-beige-light);
+  border-left: 3px solid var(--color-beige);
   border-radius: var(--radius);
 }
 
 .block-abschnitt.kasten-rosa {
-  padding: 0.8em 1em;
-  background: var(--color-kasten-rosa);
-  border-left: 4px solid var(--color-kasten-rosa-border);
+  padding: 0.6em 1em;
+  background: var(--color-rosa);
   border-radius: var(--radius);
 }
 
+.abschnitt-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 2em;
+}
+
+/* Vorgabe block */
 .block-vorgabe {
-  padding: 0.8em 1em;
-  border: 1px solid var(--color-border);
-  border-left: 4px solid var(--color-accent);
-  border-radius: var(--radius);
+  margin-bottom: 1.5em;
+}
+
+.vorgabe-name {
+  font-weight: 900;
+  font-size: 1.3rem;
+  margin-bottom: 0.4em;
 }
 
 .vorgabe-regeln {
-  list-style: disc;
-  margin: 0.4em 0 0.4em 1.4em;
-}
-
-.block-startbedingungen {
-  padding: 0.8em 1em;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-}
-
-.startbed-table {
-  width: auto;
+  list-style: none;
+  padding: 0;
   margin: 0.4em 0;
 }
 
-.startbed-table td:first-child {
-  width: 140px;
+.vorgabe-regeln li {
+  margin-bottom: 0.15em;
 }
 
-.block-boegen .boegen-grid {
+.vorgabe-pflicht {
+  padding: 0.5em 1em;
+  background: var(--color-beige-light);
+  border-left: 3px solid var(--color-beige);
+  border-radius: var(--radius);
+  margin: 0.3em 0;
+}
+
+.vorgabe-pflicht strong {
+  font-weight: 900;
+}
+
+.vorgabe-beschraenkung {
+  padding: 0.5em 1em;
+  background: var(--color-rosa);
+  border-radius: var(--radius);
+  margin: 0.3em 0;
+}
+
+.vorgabe-beschraenkung strong {
+  font-weight: 900;
+}
+
+.vorgabe-untersagt {
+  padding: 0.5em 1em;
+  background: var(--color-rosa);
+  border-radius: var(--radius);
+  margin: 0.3em 0;
+}
+
+.vorgabe-untersagt strong {
+  font-weight: 900;
+}
+
+/* Vorgabe info box */
+.vorgabe-info {
+  background: var(--color-beige-light);
+  border-left: 3px solid var(--color-beige);
+  padding: 0.8em 1em;
+  border-radius: var(--radius);
+  margin-top: 0.6em;
+}
+
+.vorgabe-info-row {
   display: flex;
+  gap: 2em;
   flex-wrap: wrap;
-  gap: 1em;
+  margin-bottom: 0.3em;
+}
+
+.vorgabe-info-row span {
+  font-weight: 900;
+}
+
+.vorgabe-info .wertung-divider {
+  border-top-color: var(--color-beige);
+}
+
+.vorgabe-abzuege {
+  display: flex;
+  gap: 2em;
+  font-size: 0.95rem;
+}
+
+.vorgabe-abzuege .abzug-value {
+  font-weight: 900;
+  color: var(--color-accent);
+}
+
+/* Startbedingungen */
+.block-startbedingungen {
+  margin-bottom: 1em;
+}
+
+.startbed-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.startbed-table td {
+  padding: 0.3em 0.6em;
+  border: none;
+  border-bottom: 1px solid var(--color-beige);
+  vertical-align: top;
+}
+
+.startbed-table td:first-child {
+  width: 200px;
+  font-weight: 700;
+}
+
+/* Bogenklasse */
+.block-bogenklasse h3 {
+  font-weight: 900;
+}
+
+.block-bogenklasse ul {
+  list-style: none;
+  padding: 0;
+}
+
+.block-bogenklasse li {
+  margin-bottom: 0.15em;
+}
+
+/* Boegen grid */
+.block-boegen .boegen-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5em 2em;
 }
 
 .bogen-fig {
@@ -221,10 +337,16 @@ th:empty ~ th:empty {
 }
 
 .bogen-fig img {
-  max-width: 200px;
+  max-width: 180px;
   height: auto;
 }
 
+.bogen-fig figcaption {
+  font-weight: 900;
+  margin-top: 0.3em;
+}
+
+/* Pirouette */
 .block-pirouette {
   display: flex;
   gap: 1.5em;
@@ -237,6 +359,7 @@ th:empty ~ th:empty {
   border-radius: var(--radius);
 }
 
+/* Bild */
 .block-bild img {
   max-width: 100%;
   height: auto;
@@ -250,30 +373,54 @@ th:empty ~ th:empty {
   margin-top: 0.4em;
 }
 
+/* Kontakte */
 .block-kontakte {
   display: grid;
   gap: 1em;
 }
 
 .kontakt {
-  padding: 0.6em 0.8em;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-beige);
   border-radius: var(--radius);
+  overflow: hidden;
 }
 
 .kontakt-rolle {
+  display: inline-block;
+  padding: 0.3em 0.8em;
+  background: var(--color-beige-light);
   font-weight: 600;
-  font-size: 0.9rem;
-  color: var(--color-primary);
+  font-size: 0.85rem;
+  border-bottom-right-radius: var(--radius);
+}
+
+.kontakt-body {
+  padding: 0.6em 0.8em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 1em;
 }
 
 .kontakt-name {
-  margin-top: 0.1em;
+  font-weight: 900;
+  grid-column: 1;
 }
 
-.kontakt-adresse,
+.kontakt-adresse {
+  font-size: 0.9rem;
+  grid-column: 1;
+}
+
+.kontakt-phone-email {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
 .kontakt-telefon,
 .kontakt-email {
   font-size: 0.9rem;
-  color: var(--color-text-light);
+}
+
+.kontakt-email a {
+  color: var(--color-text);
 }

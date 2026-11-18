@@ -49,7 +49,8 @@ collections:
                     fields:
                       - { name: typ, label: Typ, widget: hidden, default: pruefung }
                       - { name: name, label: Name, widget: string }
-                      - { name: elemente, label: Elemente, widget: list, field: { name: element, widget: string }, required: false }
+                      - { name: elemente, label: Elemente (links), widget: list, field: { name: element, widget: string }, required: false }
+                      - { name: elemente_rechts, label: Elemente (rechts), widget: list, field: { name: element, widget: string }, required: false }
                       - { name: beschreibung, label: Beschreibung, widget: markdown, required: false }
                       - name: wertung
                         label: Wertung
@@ -192,7 +193,8 @@ collections:
                     fields:
                       - { name: typ, label: Typ, widget: hidden, default: pruefung }
                       - { name: name, label: Name, widget: string }
-                      - { name: elemente, label: Elemente, widget: list, field: { name: element, widget: string }, required: false }
+                      - { name: elemente, label: Elemente (links), widget: list, field: { name: element, widget: string }, required: false }
+                      - { name: elemente_rechts, label: Elemente (rechts), widget: list, field: { name: element, widget: string }, required: false }
                       - { name: beschreibung, label: Beschreibung, widget: markdown, required: false }
                       - name: wertung
                         label: Wertung

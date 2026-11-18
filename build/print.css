@@ -6,7 +6,7 @@
 body.page-print {
   width: 793.7px;
   background: #fff;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.5;
 }
 
@@ -18,42 +18,115 @@ body.page-print {
   overflow: hidden;
 }
 
+/* Cover page */
 .cover-page {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(160deg, #1a3a5c 0%, #2d5f8a 100%);
-  color: #fff;
+  background: #fff;
+  color: var(--color-text);
+  padding: 60px 70px;
+}
+
+.cover-saison {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.cover-logo {
+  margin-bottom: 30px;
+}
+
+.cover-logo img {
+  width: 120px;
+  height: auto;
 }
 
 .cover-content {
   text-align: center;
-  padding: 2em;
 }
 
 .cover-content h1 {
-  font-size: 36px;
-  margin-bottom: 0.3em;
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 0.2em;
 }
 
 .cover-subtitle {
-  font-size: 18px;
-  font-weight: 300;
-  opacity: 0.9;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.cover-unterzeile {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--color-text-light);
+  margin-bottom: 40px;
+}
+
+/* Cover TOC table */
+.cover-toc {
+  width: 480px;
+  border-collapse: collapse;
+  margin: 0 auto 30px;
+}
+
+.cover-toc td {
+  padding: 6px 10px;
+  border: 1px solid var(--color-beige);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.cover-toc .toc-num {
+  width: 36px;
+  text-align: center;
+  background: var(--color-beige-light);
+  font-weight: 700;
+}
+
+.cover-toc .toc-label {
+  font-weight: 500;
 }
 
 .cover-stand {
-  margin-top: 1.5em;
-  font-size: 14px;
-  opacity: 0.7;
+  font-size: 11px;
+  color: var(--color-text-light);
+  margin-top: 10px;
 }
 
+.cover-stand strong {
+  font-weight: 700;
+}
+
+/* Section divider page */
+.divider-page {
+  background: var(--color-beige);
+}
+
+.divider-title {
+  position: absolute;
+  bottom: 80px;
+  right: 60px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  font-size: 80px;
+  font-weight: 900;
+  color: var(--color-text);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+/* TOC page (not used if on cover) */
 .toc-page {
   padding: 80px 70px 60px;
 }
 
 .toc-page h2 {
-  color: #1a3a5c;
   margin-bottom: 0.6em;
 }
 
@@ -74,36 +147,44 @@ body.page-print {
   content: counter(toci) ".";
   display: inline-block;
   width: 1.5em;
-  font-weight: 600;
-  color: #1a3a5c;
+  font-weight: 700;
 }
 
 .toc-page li a {
-  color: #1e1e1e;
+  color: var(--color-text);
   text-decoration: none;
 }
 
+/* Content pages */
 .content-page {
-  padding: 80px 50px 60px 70px;
+  padding: 55px 50px 50px 70px;
 }
 
 .page-content {
-  max-height: calc(1122.5px - 80px - 60px);
+  max-height: calc(1122.5px - 55px - 50px);
   overflow: hidden;
 }
 
+/* Page header: chapter name left, page number right */
 .page-header {
   position: absolute;
   top: 20px;
   left: 70px;
   right: 50px;
-  font-size: 10px;
-  font-weight: 600;
-  color: #1a3a5c;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  border-bottom: 1px solid #d0d5dd;
-  padding-bottom: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-text);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.page-header-title {
+  font-weight: 400;
+}
+
+.page-header-pagenum {
+  font-weight: 400;
 }
 
 .page-footer {
@@ -116,97 +197,206 @@ body.page-print {
   color: #888;
 }
 
+/* Register tabs */
 .register-strip {
   position: absolute;
   top: 0;
   right: 0;
-  width: 24px;
+  width: 26px;
+  height: 100%;
 }
 
 .register-tab {
   position: absolute;
   right: 0;
-  width: 24px;
-  font-size: 0;
-  background: #e8ecf0;
-  border-left: 2px solid #d0d5dd;
-  text-decoration: none;
+  width: 26px;
+  background: #e8e2dc;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  border-left: 1px solid var(--color-beige);
 }
 
 .register-tab.active {
-  background: #1a3a5c;
-  border-left-color: #1a3a5c;
+  background: var(--color-beige);
+  font-weight: 900;
 }
 
-.tab-label {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  font-size: 7px;
-  font-weight: 600;
-  color: #555;
-  white-space: nowrap;
-  transform: rotate(180deg);
-  max-height: calc(100% - 4px);
-  overflow: hidden;
-  text-overflow: ellipsis;
+.tab-num {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--color-text);
+  text-align: center;
 }
 
-.register-tab.active .tab-label {
-  color: #fff;
+.register-tab.active .tab-num {
+  font-weight: 900;
+}
+
+/* Hamburger icon in top-right register area */
+.register-menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 26px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--color-text-light);
 }
 
 /* Print block styles */
 .content-page h2 {
-  color: #1a3a5c;
-  font-size: 16px;
-  border-bottom: 2px solid #1a3a5c;
-  padding-bottom: 3px;
-  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  border: none;
+  padding-bottom: 0;
 }
 
 .content-page .block {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
-.content-page .block-hinweis {
-  padding: 6px 8px;
-  font-size: 10px;
+/* Pruefung in print */
+.content-page .pruefung-name {
+  font-size: 16px;
+  font-weight: 900;
+  margin-bottom: 4px;
 }
 
-.content-page .block-pruefung {
-  padding: 6px 8px;
+.content-page .pruefung-element {
+  font-size: 12px;
+  margin-bottom: 1px;
+  line-height: 1.4;
 }
 
-.content-page .block-pruefung h3 {
+.content-page .pruefung-elemente-grid {
+  gap: 0 20px;
+}
+
+.content-page .pruefung-wertung {
+  padding: 8px 12px;
+  margin-top: 8px;
   font-size: 12px;
 }
 
-.content-page table {
+.content-page .wertung-title {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.content-page .wertung-row {
+  gap: 20px;
+  margin-bottom: 2px;
+  font-size: 12px;
+}
+
+.content-page .wertung-divider {
+  margin: 4px 0;
+}
+
+.content-page .noten-row {
+  font-size: 11px;
+}
+
+/* Hinweis in print */
+.content-page .block-hinweis {
+  padding: 5px 10px;
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+
+/* Abschnitt in print */
+.content-page .block-abschnitt {
+  font-size: 12px;
+}
+
+.content-page .block-abschnitt.kasten-grau,
+.content-page .block-abschnitt.kasten-rosa {
+  padding: 5px 10px;
+}
+
+.content-page .block-abschnitt h3 {
+  font-size: 14px;
+  font-weight: 900;
+}
+
+/* Vorgabe in print */
+.content-page .vorgabe-name {
+  font-size: 16px;
+}
+
+.content-page .vorgabe-pflicht,
+.content-page .vorgabe-beschraenkung,
+.content-page .vorgabe-untersagt {
+  padding: 4px 10px;
+  font-size: 11px;
+  margin: 2px 0;
+}
+
+.content-page .vorgabe-info {
+  padding: 8px 12px;
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+/* Startbedingungen in print */
+.content-page .block-startbedingungen h3 {
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.content-page .startbed-table {
+  font-size: 11px;
+}
+
+.content-page .startbed-table td {
+  padding: 2px 6px;
+}
+
+/* Boegen in print */
+.content-page .boegen-grid {
+  gap: 1em 1.5em;
+}
+
+.content-page .bogen-fig img {
+  max-width: 140px;
+}
+
+.content-page .bogen-fig figcaption {
+  font-size: 11px;
+  font-weight: 900;
+}
+
+/* Kontakte in print */
+.content-page .kontakt {
+  page-break-inside: avoid;
+}
+
+.content-page .kontakt-rolle {
   font-size: 10px;
 }
 
+.content-page .kontakt-name {
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.content-page .kontakt-adresse,
+.content-page .kontakt-telefon,
+.content-page .kontakt-email {
+  font-size: 11px;
+}
+
+/* Tables in print */
+.content-page table {
+  font-size: 11px;
+}
+
 .content-page th, .content-page td {
-  padding: 2px 5px;
-}
-
-.content-page .block-startbedingungen h3 {
-  font-size: 13px;
-  color: #1a3a5c;
-}
-
-.content-page .block-vorgabe {
-  border-left-width: 3px;
-}
-
-.content-page .block-abschnitt.kasten-grau {
-  padding: 6px 8px;
-}
-
-.content-page .block-abschnitt.kasten-rosa {
-  padding: 6px 8px;
-  border-left-width: 3px;
+  padding: 2px 6px;
 }

@@ -63,7 +63,7 @@ main {
 }
 
 .pdf-link:hover {
-  background: var(--color-primary-light);
+  opacity: 0.85;
   text-decoration: none;
 }
 
