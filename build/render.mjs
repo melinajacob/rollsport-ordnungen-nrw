@@ -18,10 +18,32 @@ function escHtml(s) {
   return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
+function slugify(text) {
+  return text.toLowerCase()
+    .replace(/[äÄ]/g, 'ae').replace(/[öÖ]/g, 'oe').replace(/[üÜ]/g, 'ue').replace(/ß/g, 'ss')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+}
+
+function getBlockLabel(block) {
+  switch (block.typ) {
+    case 'pruefung': return block.name;
+    case 'vorgabe': return block.name;
+    case 'abschnitt': return block.titel;
+    case 'boegen': return block.name;
+    case 'bogenklasse': return block.name;
+    case 'startbedingungen': return block.klasse;
+    case 'pirouette': return block.name;
+    default: return null;
+  }
+}
+
 function renderBlock(block) {
   const attrs = [];
   if (block.neue_seite) attrs.push('data-neue-seite');
   if (block.kopfzeile) attrs.push(`data-kopfzeile="${escHtml(block.kopfzeile)}"`);
+  const label = getBlockLabel(block);
+  if (label) attrs.push(`id="${slugify(label)}"`);
   const extra = attrs.length ? ' ' + attrs.join(' ') : '';
 
   switch (block.typ) {
@@ -206,10 +228,17 @@ function renderBlock(block) {
 
 function renderToc(doc) {
   return `<nav class="toc">
-    <h2>Inhaltsverzeichnis</h2>
-    <ol>${doc.kapitel.map(k =>
-      `<li><a href="#${escHtml(k.id)}">${escHtml(k.titel)}</a></li>`
-    ).join('')}</ol>
+    <ol>${doc.kapitel.map(k => {
+      const subs = (k.bloecke || [])
+        .map(b => ({ label: getBlockLabel(b), slug: getBlockLabel(b) ? slugify(getBlockLabel(b)) : null }))
+        .filter(s => s.label);
+      const subList = subs.length
+        ? `<ul class="toc-sub">${subs.map(s =>
+            `<li><a href="#${escHtml(s.slug)}">${escHtml(s.label)}</a></li>`
+          ).join('')}</ul>`
+        : '';
+      return `<li><a href="#${escHtml(k.id)}">${escHtml(k.titel)}</a>${subList}</li>`;
+    }).join('')}</ol>
   </nav>`;
 }
 
@@ -241,26 +270,117 @@ export function renderWebPage(doc, slug) {
 </head>
 <body class="page-doc">
   <header class="site-header">
-    <a href="../" class="site-logo">Rollkunstlauf NRW</a>
+    <div class="header-left">
+      <button class="menu-btn" id="menu-btn" aria-label="Navigation öffnen">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+      <a href="../" class="site-logo">Rollkunstlauf NRW</a>
+    </div>
     <nav class="site-nav">
       <a href="../pruefungsordnung/">Prüfungsordnung</a>
       <a href="../wettkampfordnung/">Wettkampfordnung</a>
     </nav>
   </header>
-  <main>
-    <div class="doc-header">
-      <h1>${escHtml(doc.titel)}</h1>
-      <p class="doc-meta">${escHtml(doc.untertitel)} · Stand: ${escHtml(doc.stand)}</p>
-      <a class="pdf-link" href="${slug}.pdf" download>PDF herunterladen</a>
-    </div>
-    ${renderToc(doc)}
-    <div class="doc-content">
-      ${doc.kapitel.map(renderChapter).join('\n')}
-    </div>
-  </main>
+  <div class="doc-layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-head">
+        <span class="sidebar-title">Inhaltsverzeichnis</span>
+        <button class="sidebar-close" id="sidebar-close" aria-label="Navigation schließen">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M5 5l8 8M13 5l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      ${renderToc(doc)}
+    </aside>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <main>
+      <div class="doc-header">
+        <h1>${escHtml(doc.titel)}</h1>
+        <p class="doc-meta">${escHtml(doc.untertitel)} · Stand: ${escHtml(doc.stand)}</p>
+        <a class="pdf-link" href="${slug}.pdf" download>PDF herunterladen</a>
+      </div>
+      <div class="doc-content">
+        ${doc.kapitel.map(renderChapter).join('\n')}
+      </div>
+    </main>
+  </div>
   <footer class="site-footer">
     <p>&copy; Rollsport-Verband Nordrhein-Westfalen &middot; Stand: ${escHtml(doc.stand)}</p>
   </footer>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const closeBtn = document.getElementById('sidebar-close');
+    const overlay = document.getElementById('sidebar-overlay');
+    const sidebar = document.getElementById('sidebar');
+
+    function toggleSidebar() {
+      if (window.innerWidth > 900) {
+        document.body.classList.toggle('sidebar-closed');
+      } else {
+        document.body.classList.toggle('sidebar-open');
+      }
+    }
+    function closeSidebar() {
+      document.body.classList.remove('sidebar-open');
+      if (window.innerWidth > 900) {
+        document.body.classList.add('sidebar-closed');
+      }
+    }
+    menuBtn.addEventListener('click', toggleSidebar);
+    closeBtn.addEventListener('click', closeSidebar);
+    overlay.addEventListener('click', closeSidebar);
+    sidebar.querySelectorAll('.toc a').forEach(a => {
+      a.addEventListener('click', () => {
+        if (window.innerWidth <= 900) closeSidebar();
+      });
+    });
+
+    // Table filter for "Klasse" columns
+    document.querySelectorAll('table').forEach(table => {
+      const headers = Array.from(table.querySelectorAll('thead th'));
+      const klasseIdx = headers.findIndex(th => th.textContent.trim() === 'Klasse');
+      if (klasseIdx === -1) return;
+
+      const rows = Array.from(table.querySelectorAll('tbody tr'));
+      const values = [...new Set(rows.map(r => {
+        const cells = r.querySelectorAll('td');
+        return cells[klasseIdx] ? cells[klasseIdx].textContent.trim() : '';
+      }).filter(Boolean))];
+
+      if (values.length < 2) return;
+
+      const bar = document.createElement('div');
+      bar.className = 'table-filter';
+      bar.innerHTML = '<span class="filter-label">Klasse filtern:</span>';
+
+      const allBtn = document.createElement('button');
+      allBtn.textContent = 'Alle';
+      allBtn.className = 'filter-btn active';
+      allBtn.addEventListener('click', () => {
+        rows.forEach(r => r.style.display = '');
+        bar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        allBtn.classList.add('active');
+      });
+      bar.appendChild(allBtn);
+
+      values.forEach(val => {
+        const btn = document.createElement('button');
+        btn.textContent = val;
+        btn.className = 'filter-btn';
+        btn.addEventListener('click', () => {
+          rows.forEach(r => {
+            const cells = r.querySelectorAll('td');
+            const cell = cells[klasseIdx] ? cells[klasseIdx].textContent.trim() : '';
+            r.style.display = cell === val ? '' : 'none';
+          });
+          bar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+        });
+        bar.appendChild(btn);
+      });
+
+      table.parentElement.insertBefore(bar, table);
+    });
+  </script>
 </body>
 </html>`;
 }
