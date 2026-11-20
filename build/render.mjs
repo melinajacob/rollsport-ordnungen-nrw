@@ -289,6 +289,10 @@ export function renderWebPage(doc, slug) {
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M5 5l8 8M13 5l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
         </button>
       </div>
+      <div class="search-box">
+        <input type="search" id="search-input" placeholder="Suchen…" autocomplete="off" />
+        <div class="search-results" id="search-results"></div>
+      </div>
       ${renderToc(doc)}
     </aside>
     <div class="sidebar-overlay" id="sidebar-overlay"></div>
@@ -379,6 +383,101 @@ export function renderWebPage(doc, slug) {
       });
 
       table.parentElement.insertBefore(bar, table);
+    });
+
+    // Search
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+    let searchIndex = null;
+
+    function buildIndex() {
+      const entries = [];
+      document.querySelectorAll('.doc-content .block').forEach(block => {
+        const text = block.textContent;
+        const heading = block.querySelector('h3');
+        const kapitel = block.closest('.kapitel');
+        const label = heading ? heading.textContent.trim() : '';
+        const section = kapitel ? kapitel.querySelector('h2').textContent.trim() : '';
+        const id = block.id || (kapitel ? kapitel.id : '');
+        entries.push({ el: block, text: text.toLowerCase(), label, section, id });
+      });
+      document.querySelectorAll('.doc-content .kapitel').forEach(kap => {
+        const h2 = kap.querySelector('h2');
+        if (!h2) return;
+        const text = h2.textContent;
+        entries.push({ el: kap, text: text.toLowerCase(), label: text.trim(), section: '', id: kap.id });
+      });
+      return entries;
+    }
+
+    function doSearch(query) {
+      if (!searchIndex) searchIndex = buildIndex();
+      const q = query.toLowerCase().trim();
+      if (q.length < 2) { searchResults.innerHTML = ''; searchResults.classList.remove('visible'); return; }
+
+      const hits = searchIndex
+        .filter(e => e.text.includes(q))
+        .slice(0, 20);
+
+      if (!hits.length) {
+        searchResults.innerHTML = '<div class="search-empty">Keine Treffer</div>';
+        searchResults.classList.add('visible');
+        return;
+      }
+
+      searchResults.innerHTML = hits.map(h => {
+        const title = h.label || h.section || 'Abschnitt';
+        const ctx = getContext(h.text, q);
+        return '<a class="search-hit" href="#' + (h.id || '') + '" data-id="' + (h.id || '') + '">'
+          + '<span class="hit-title">' + escH(title) + '</span>'
+          + (h.section && h.label ? '<span class="hit-section">' + escH(h.section) + '</span>' : '')
+          + '<span class="hit-ctx">' + ctx + '</span>'
+          + '</a>';
+      }).join('');
+      searchResults.classList.add('visible');
+
+      searchResults.querySelectorAll('.search-hit').forEach(a => {
+        a.addEventListener('click', e => {
+          e.preventDefault();
+          const id = a.dataset.id;
+          const target = id ? document.getElementById(id) : null;
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            target.classList.add('search-highlight');
+            setTimeout(() => target.classList.remove('search-highlight'), 2000);
+          }
+          searchResults.innerHTML = '';
+          searchResults.classList.remove('visible');
+          searchInput.value = '';
+          if (window.innerWidth <= 900) closeSidebar();
+        });
+      });
+    }
+
+    function getContext(text, q) {
+      const i = text.indexOf(q);
+      if (i === -1) return '';
+      const start = Math.max(0, i - 30);
+      const end = Math.min(text.length, i + q.length + 30);
+      let snippet = (start > 0 ? '…' : '') + text.slice(start, end).replace(/\\s+/g, ' ') + (end < text.length ? '…' : '');
+      const esc = escH(snippet);
+      const qEsc = escH(q);
+      return esc.replace(new RegExp(qEsc.replace(/[.*+?^\${}()|[\\]\\\\]/g, '\\\\$&'), 'gi'), '<mark>$&</mark>');
+    }
+
+    function escH(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+    let searchTimer;
+    searchInput.addEventListener('input', () => {
+      clearTimeout(searchTimer);
+      searchTimer = setTimeout(() => doSearch(searchInput.value), 150);
+    });
+
+    document.addEventListener('click', e => {
+      if (!e.target.closest('.search-box')) {
+        searchResults.innerHTML = '';
+        searchResults.classList.remove('visible');
+      }
     });
   </script>
 </body>

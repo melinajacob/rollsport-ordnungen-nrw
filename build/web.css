@@ -124,6 +124,114 @@
   z-index: 40;
 }
 
+/* Search */
+.search-box {
+  padding: 0 1em 0.6em;
+  position: relative;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 0.45em 0.7em;
+  font-family: var(--font);
+  font-size: 0.85rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-bg);
+  color: var(--color-text);
+  outline: none;
+}
+
+.search-box input:focus {
+  border-color: var(--color-link);
+  box-shadow: 0 0 0 2px rgba(26, 95, 168, 0.15);
+}
+
+.search-box input::placeholder {
+  color: var(--color-text-light);
+}
+
+.search-results {
+  display: none;
+  position: absolute;
+  left: 1em;
+  right: 1em;
+  top: 100%;
+  max-height: 60vh;
+  overflow-y: auto;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  z-index: 10;
+}
+
+.search-results.visible {
+  display: block;
+}
+
+.search-hit {
+  display: block;
+  padding: 0.5em 0.7em;
+  text-decoration: none;
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-border);
+  cursor: pointer;
+}
+
+.search-hit:last-child {
+  border-bottom: none;
+}
+
+.search-hit:hover {
+  background: var(--color-bg-alt);
+  text-decoration: none;
+}
+
+.hit-title {
+  display: block;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--color-primary);
+}
+
+.hit-section {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+}
+
+.hit-ctx {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--color-text-light);
+  margin-top: 0.15em;
+  line-height: 1.3;
+}
+
+.hit-ctx mark {
+  background: #fde68a;
+  color: var(--color-text);
+  border-radius: 2px;
+  padding: 0 1px;
+}
+
+.search-empty {
+  padding: 0.7em;
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  text-align: center;
+}
+
+.search-highlight {
+  animation: search-flash 2s ease;
+}
+
+@keyframes search-flash {
+  0%, 30% { background: rgba(253, 230, 138, 0.5); }
+  100% { background: transparent; }
+}
+
 /* TOC inside sidebar */
 .toc {
   padding: 0 1em 1.5em;
