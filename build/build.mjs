@@ -42,6 +42,13 @@ if (existsSync(join(CONTENT_DIR, 'wko'))) {
     cpSync(join(CONTENT_DIR, 'wko'), target, { recursive: true });
   }
 }
+if (existsSync(join(CONTENT_DIR, 'pirouetten'))) {
+  for (const { slug } of documents) {
+    const target = join(DIST, slug, 'pirouetten');
+    mkdirSync(target, { recursive: true });
+    cpSync(join(CONTENT_DIR, 'pirouetten'), target, { recursive: true });
+  }
+}
 const logoSrc = join(CONTENT_DIR, 'rkb-logo.png');
 if (existsSync(logoSrc)) {
   mkdirSync(join(DIST, 'content'), { recursive: true });
