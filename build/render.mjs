@@ -250,8 +250,12 @@ function renderChapter(kapitel) {
   const extra = attrs.length ? ' ' + attrs.join(' ') : '';
 
   return `<section class="kapitel" id="${escHtml(kapitel.id)}"${extra}>
-    <h2>${escHtml(kapitel.titel)}</h2>
-    ${kapitel.bloecke.map(renderBlock).join('\n')}
+    <div class="kapitel-header">
+      <h2>${escHtml(kapitel.titel)}</h2>
+    </div>
+    <div class="kapitel-body">
+      ${kapitel.bloecke.map(renderBlock).join('\n')}
+    </div>
   </section>`;
 }
 
