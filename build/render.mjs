@@ -483,6 +483,33 @@ export function renderWebPage(doc, slug) {
         searchResults.classList.remove('visible');
       }
     });
+
+    // Pirouette hover overlays
+    document.querySelectorAll('table').forEach(table => {
+      const ths = Array.from(table.querySelectorAll('thead th'));
+      const piroIdx = ths.findIndex(th => th.textContent.trim() === 'Pirouette');
+      if (piroIdx === -1) return;
+
+      table.querySelectorAll('tbody tr').forEach(row => {
+        const cell = row.querySelectorAll('td')[piroIdx];
+        if (!cell) return;
+        const name = cell.textContent.trim();
+        cell.classList.add('piro-cell');
+        const overlay = document.createElement('div');
+        overlay.className = 'piro-overlay';
+        overlay.innerHTML = '<svg width="160" height="140" viewBox="0 0 160 140" fill="none" xmlns="http://www.w3.org/2000/svg">'
+          + '<rect width="160" height="140" rx="4" fill="#f0e6dd"/>'
+          + '<circle cx="80" cy="55" r="22" stroke="#d5c8bd" stroke-width="2" fill="none"/>'
+          + '<line x1="80" y1="33" x2="80" y2="10" stroke="#d5c8bd" stroke-width="2" stroke-linecap="round"/>'
+          + '<line x1="80" y1="77" x2="80" y2="120" stroke="#d5c8bd" stroke-width="2" stroke-linecap="round"/>'
+          + '<line x1="58" y1="55" x2="38" y2="40" stroke="#d5c8bd" stroke-width="2" stroke-linecap="round"/>'
+          + '<line x1="102" y1="55" x2="122" y2="40" stroke="#d5c8bd" stroke-width="2" stroke-linecap="round"/>'
+          + '<text x="80" y="135" text-anchor="middle" font-size="10" fill="#888" font-family="Outfit, sans-serif">Platzhalter</text>'
+          + '</svg>'
+          + '<span class="piro-label">' + escH(name) + '</span>';
+        cell.appendChild(overlay);
+      });
+    });
   </script>
 </body>
 </html>`;

@@ -403,7 +403,6 @@ main {
 .doc-content .kapitel {
   background: var(--color-bg);
   border-radius: 8px;
-  overflow: hidden;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
   margin-top: 1.5em;
 }
@@ -416,6 +415,7 @@ main {
   background: var(--color-beige-light);
   padding: 0.9em 1.5em;
   border-bottom: 1px solid var(--color-border);
+  border-radius: 8px 8px 0 0;
 }
 
 .kapitel-header h2 {
@@ -425,6 +425,7 @@ main {
 
 .kapitel-body {
   padding: 1.5em;
+  border-radius: 0 0 8px 8px;
 }
 
 .site-footer {
@@ -496,6 +497,60 @@ main {
 
   .landing h1 {
     font-size: 1.6rem;
+  }
+}
+
+/* Pirouette hover overlay */
+.piro-cell {
+  position: relative;
+  cursor: pointer;
+}
+
+.piro-cell:hover .piro-overlay {
+  display: block;
+}
+
+.piro-overlay {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 12px;
+  width: 180px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.14);
+  padding: 10px;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.piro-overlay img {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+  border-radius: 4px;
+  background: var(--color-bg-alt);
+}
+
+.piro-overlay .piro-label {
+  display: block;
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+  margin-top: 6px;
+}
+
+@media (max-width: 900px) {
+  .piro-overlay {
+    left: 0;
+    top: 100%;
+    transform: none;
+    margin-left: 0;
+    margin-top: 8px;
   }
 }
 
