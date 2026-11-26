@@ -313,48 +313,6 @@
   color: var(--color-link);
 }
 
-/* Table filter */
-.table-filter {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.4em;
-  margin-bottom: 0.8em;
-  padding: 0.6em 0.8em;
-  background: var(--color-bg-alt);
-  border-radius: var(--radius);
-}
-
-.filter-label {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--color-text-light);
-  margin-right: 0.3em;
-}
-
-.filter-btn {
-  padding: 0.25em 0.7em;
-  font-size: 0.82rem;
-  font-family: var(--font);
-  font-weight: 500;
-  border: 1px solid var(--color-border);
-  border-radius: 20px;
-  background: var(--color-bg);
-  color: var(--color-text);
-  cursor: pointer;
-  transition: background 0.15s, border-color 0.15s;
-}
-
-.filter-btn:hover {
-  border-color: var(--color-primary);
-}
-
-.filter-btn.active {
-  background: var(--color-primary);
-  color: #fff;
-  border-color: var(--color-primary);
-}
-
 /* Main content */
 main {
   flex: 1;

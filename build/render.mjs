@@ -349,53 +349,6 @@ export function renderWebPage(doc, slug) {
       });
     });
 
-    // Table filter for "Klasse" columns
-    document.querySelectorAll('table').forEach(table => {
-      const headers = Array.from(table.querySelectorAll('thead th'));
-      const klasseIdx = headers.findIndex(th => th.textContent.trim() === 'Klasse');
-      if (klasseIdx === -1) return;
-
-      const rows = Array.from(table.querySelectorAll('tbody tr'));
-      const values = [...new Set(rows.map(r => {
-        const cells = r.querySelectorAll('td');
-        return cells[klasseIdx] ? cells[klasseIdx].textContent.trim() : '';
-      }).filter(Boolean))];
-
-      if (values.length < 2) return;
-
-      const bar = document.createElement('div');
-      bar.className = 'table-filter';
-      bar.innerHTML = '<span class="filter-label">Klasse filtern:</span>';
-
-      const allBtn = document.createElement('button');
-      allBtn.textContent = 'Alle';
-      allBtn.className = 'filter-btn active';
-      allBtn.addEventListener('click', () => {
-        rows.forEach(r => r.style.display = '');
-        bar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        allBtn.classList.add('active');
-      });
-      bar.appendChild(allBtn);
-
-      values.forEach(val => {
-        const btn = document.createElement('button');
-        btn.textContent = val;
-        btn.className = 'filter-btn';
-        btn.addEventListener('click', () => {
-          rows.forEach(r => {
-            const cells = r.querySelectorAll('td');
-            const cell = cells[klasseIdx] ? cells[klasseIdx].textContent.trim() : '';
-            r.style.display = cell === val ? '' : 'none';
-          });
-          bar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-        });
-        bar.appendChild(btn);
-      });
-
-      table.parentElement.insertBefore(bar, table);
-    });
-
     // Search
     const searchInput = document.getElementById('search-input');
     const searchResults = document.getElementById('search-results');
