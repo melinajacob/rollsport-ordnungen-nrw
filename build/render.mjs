@@ -289,10 +289,6 @@ export function renderWebPage(doc, slug) {
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M5 5l8 8M13 5l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
         </button>
       </div>
-      <div class="search-box">
-        <input type="search" id="search-input" placeholder="Suchen…" autocomplete="off" />
-        <div class="search-results" id="search-results"></div>
-      </div>
       ${renderToc(doc)}
     </aside>
     <div class="sidebar-overlay" id="sidebar-overlay"></div>
@@ -301,6 +297,11 @@ export function renderWebPage(doc, slug) {
         <h1>${escHtml(doc.titel)}</h1>
         <p class="doc-meta">${escHtml(doc.untertitel)} · Stand: ${escHtml(doc.stand)}</p>
         <a class="pdf-link" href="${slug}.pdf" download>PDF herunterladen</a>
+        <div class="search-box">
+          <svg class="search-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="6.5" cy="6.5" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M10.5 10.5L14.5 14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <input type="search" id="search-input" placeholder="Suchen…" autocomplete="off" />
+          <div class="search-results" id="search-results"></div>
+        </div>
       </div>
       <div class="doc-content">
         ${doc.kapitel.map(renderChapter).join('\n')}
@@ -449,7 +450,6 @@ export function renderWebPage(doc, slug) {
           searchResults.innerHTML = '';
           searchResults.classList.remove('visible');
           searchInput.value = '';
-          if (window.innerWidth <= 900) closeSidebar();
         });
       });
     }
